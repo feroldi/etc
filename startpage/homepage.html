@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<!--
+
+    Author:        Twily                                        2015
+    Website:       http://twily.info/
+    Compatibility: Mozilla Firefox, Internet Explorer, Google Chrome
+
+    Search Usage:  "artist!i" will find images for "artist"
+
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>New Tab</title>
+
+<style type="text/css">
+/*
+    >> Search and Replace to change color scheme
+
+    * (If you make two or more the same value you will need to
+       manually separate the colors in the code later to undo) 
+
+    #191919 - Background        #D54A56 - Color Mnu1
+    #020202 - Content BG        #84BD3F - Color Mnu2
+    #6d6b6e - Content FG        #D753A4 - Color Mnu3
+    #6d6b6e - C FG Light        #6F67E6 - Color Mnu4
+    #111113 - L FG Hover
+
+    Transition: "transition: .2s ease-out"
+    Menu Width: "width: 200px"
+    Margin Top: "margin-top: -75px"
+    Border Rad: "border-radius: 1px"
+*/
+
+html,body {
+    margin: 0; padding: 0; overflow: hidden;
+    width: 100%; height: 100%;
+    font-family: "Terminus", "Droid Sans", "Liberation Sans", "DejaVu Sans", "Segoe UI", Sans; font-size: 7.75pt;
+    background: #000000;
+}
+*:focus  { outline: none; }
+ul, li   { list-style-type: none; margin: 0; padding: 0; }
+textarea { background: transparent; color: #6d6b6e; }
+
+a, a:link, a:visited { color: #6d6b6e; text-decoration: none; transition: .2s ease-out; }
+a:hover, a:active    { color: #111113; }
+
+#preview { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+#overlay {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%; z-index: 2;
+    opacity: 1; transition: .5s;
+    background: #000000;
+    /* Uncomment below and disable 'showPreview' in the javascript to use custom background image */
+    /*
+    background: url('file:///home/guest/lewd-twily.jpg') no-repeat center center fixed;
+    background-size: cover; opacity: .25;
+    /**/
+}
+
+#center { position: relative; width: 100%; height: 100%; }
+#center #content {
+    margin: 0; overflow: visible; width: 100%; height: auto;
+    position: absolute; top: 50%; transform: translate(0,-50%);
+    text-align: center; opacity: 1; z-index: 10; background: #000000; /* #191919 || transparent */
+}
+
+#q {
+    width: calc((200px * 4) - (8px * 2));
+    background: #020202; color: #6d6b6e;
+    border: 0; border-radius: 1px;
+    font-family: "Terminus", "Droid Sans", "Liberation Sans", "DejaVu Sans", "Segoe UI", Sans; font-size: 12pt;
+    padding: 4px 8px; height: 24px;
+}
+
+#more {
+    background: transparent; color: #6d6b6e; display: block; 
+    text-align: center; margin: 0 auto; width: 32px; height: 32px;
+    font-weight: bold; cursor: default;
+}
+    #plus {
+        border: 0; border-radius: 1px 1px 0 0; width: 32px; height: 32px; font-size: 12pt;
+        background: transparent; color: #6d6b6e; font-weight: bold; cursor: pointer;
+        transition: .2s ease-out;
+    }
+    #help {
+        display: block; visibility: hidden; width: 320px; cursor: default;
+        position: absolute; left: 0; right: 0; margin: auto;
+        font-family: "Terminus", "PragmataPro", "Droid Sans Mono", "Liberation Sans Mono", "DejaVu Sans Mono", "Consolas", "Lucida Console", monospace;
+        padding: 8px; text-align: left; border-radius: 1px; opacity: 0;
+        background: #020202; color: #6d6b6e; transition: .2s ease-out;
+    }
+    #more:hover #plus { background: #020202; }
+    #more:hover #help { visibility: visible; opacity: 1; }
+        #note { width: 100%; height: 100px; resize: none; border: 0; outline: 0; }
+
+#menu {
+    width: 100%; height: 32px; margin: 0 auto;
+    background: transparent; color: #6d6b6e; cursor: default;
+}
+    #mnu                   { height: 32px; line-height: 32px; width: calc((200px * 4) + 1px); }
+
+    #menu ul               { display: inline-table; position: relative; list-style: none; }
+    #menu label            { padding: 0; display: inline-block; font-weight: bold; width: 200px; /* menu width */ }
+
+    #menu ul li            { float: left; border-radius: 0 0 1px 1px; height: 32px; text-align: center; transition: .2s ease-out; }
+    #menu ul li:hover      { background: #020202; color: #cecfd1;  }
+    #menu ul li a          { display: block; white-space: nowrap; padding: 0 10px; }
+
+    #menu ul ul {
+        display: flex; flex-flow: column wrap; /* column | row(-reverse) */ align-content: flex-start;
+        visibility: hidden; opacity: 0; width: calc(200px * 4); /* cols */ height: calc(32px * 3); /* rows */
+        position: absolute; bottom: 100%; left: 0; z-index: 11;
+        background: #020202; border-radius: 1px; transition: .2s ease-out;
+    }
+    #menu ul li:hover > ul { bottom: 100%; visibility: visible; opacity: 1; z-index: 12; height: calc(32px * 3); /* rows */ }
+    #menu ul ul li { background: #020202; border-radius: 1px; height: 32px; text-align: left; width: 200px; /* menu width */ }
+
+    /* Menu Colors */
+    #menu ul #mnu_1 li:hover { background: #4a4c4b; }
+    #menu ul #mnu_2 li:hover { background: #4a4c4b; }
+    #menu ul #mnu_3 li:hover { background: #4a4c4b; }
+    #menu ul #mnu_4 li:hover { background: #4a4c4b; }
+
+    #menu img { position: relative; top: 3px; left: -3px; width: 16px; height: 16px; visibility: hidden; }
+</style>
+<script type="text/javascript" language="javascript">
+var $=function(id) { return document.getElementById(id); };
+
+var help="<ul> \
+    <li><b>!g</b> = Search Google (Default)</li> \
+    <li><b>!i</b> = Search Google Images</li> \
+    <li><b>!m</b> = Search IMDb</li> \
+    <li><b>!u</b> = Search Urban Dictionary</li> \
+    <li><b>!w</b> = Search Wikipedia</li> \
+    <li><b>!y</b> = Search YouTube</li> \
+</ul>";
+
+var search=[ // Search engines
+    ["",    "https://www.google.com/#q="],                           // Google (Default)
+    ["!g",  "https://www.google.com/#q="],                           // Google
+    ["!i",  "https://www.google.com/search?tbm=isch&q="],            // Google Images
+    ["!m",  "http://www.imdb.com/find?q="],                         // IMDb
+    ["!u",  "http://www.urbandictionary.com/define.php?term="],     // Urban Dictionary
+    ["!w",  "http://en.wikipedia.org/w/index.php?search="],         // Wikipedia
+    ["!y",  "https://www.youtube.com/results?search_query="],       // YouTube
+];
+
+var menu=[ // Menu titles
+    "News",                                                         // mnu_1
+    "Programming",                                                  // mnu_2
+    "Procrastination",                                              // mnu_3
+    "Reddit",                                                       // mnu_4
+];
+
+var showFavicon = false;                                             // Enable/Disable Link Favicons (img)
+var showPreview = false;                                             // Enable/Disable Link Hover Preview (iframe)
+
+// Link setup (separate with ["", "", ""],)
+// Format: ["Name", "URL", "Custom Favicon"],
+var links=[
+    // News -           mnu_1
+    ["Arch Linux",                      "http://archlinux.org",                 ""],
+    ["/r/all",                          "http://reddit.com/r/all",              ""],
+    ["Hacker News",                     "https://news.ycombinator.com/",        ""],
+    ["Gmail",                           "https://gmail.com",                    ""],
+    ["Bountify",                        "https://bountify.co",                  ""],
+    ["Bountyc",                         "http://bountyc.com",                   ""],
+
+    ["", "", ""],
+
+    // Programming -          mnu_2
+    ["Writing an Os in Rust",           "http://os.phil-opp.com/",                     ""],
+    ["Rust book",                       "http://doc.rust-lang.org/nightly/book/",      ""],
+    ["Bare Metal Rust",                 "http://www.randomhacks.net/bare-metal-rust/", ""],
+    ["Interrupts",                      "http://wiki.osdev.org/Interrupts",            ""],
+    ["Developing OS Intro",             "http://wiki.osdev.org/Introduction",          ""],
+    ["cppreference",                    "http://en.cppreference.com/w/",               ""],
+    ["rustreference",                   "http://doc.rust-lang.org/nightly/std/",       ""],
+
+    ["", "", ""],
+
+    // Procrastination -  mnu_3
+    ["Reddit",                          "http://reddit.com",                    ""],
+    ["YouTube",                         "http://youtube.com",                   ""],
+    ["Facebook",                        "http://facebook.com",                  ""],
+    ["Messenger",                       "http://messenger.com",                 ""],
+    ["Nixers",                          "https://nixers.net/",                  ""],
+
+    ["", "", ""],
+
+    // Reddit -          mnu_4
+    ["/r/unixporn",                     "http://reddit.com/r/unixporn",           ""],
+    ["/r/rust",                         "http://reddit.com/r/rust",               ""],
+    ["/r/unixart",                      "http://reddit.com/r/unixart",            ""],
+    ["/r/btc",                          "http://reddit.com/r/btc",                ""],
+    ["/r/programming",                  "http://reddit.com/r/programming",        ""],
+    ["/r/programmerhumor",              "http://reddit.com/r/programmerhumor",    ""],
+    ["/r/linux",                        "http://reddit.com/r/linux",              ""],
+    ["/r/outrun",                       "http://reddit.com/r/outrun",          ""],
+    ["/r/linuxmasterrace",              "http://reddit.com/r/linuxmasterrace",    ""],
+    ["/r/osdev",                        "http://reddit.com/r/osdev",              ""],
+    ["/r/explainlikeimfive",            "http://reddit.com/r/explainlikeimfive",  ""],
+    ["/r/cpp",                          "http://reddit.com/r/cpp",                ""],
+];
+
+var i,ss="";
+function init() {
+    for(i=0;i<search.length;i++) if(search[i][0]=="") ss=search[i][1];
+    if(ss=="") alert("Error: Missing default search engine!");
+
+    $('help').innerHTML=help;
+	if(localStorage.getItem('note')!=null) if(localStorage.getItem('note').length!=0) toggleNote();
+    build();
+
+    if(showPreview) preview(0,0);
+    $('q').value="";
+    $('q').focus();
+}
+
+function build() { // Build menu
+    $('mnu').innerHTML="";
+
+    for(i=0;i<menu.length;i++) { // Menu titles
+        $('mnu').innerHTML+="<li><label>"+menu[i]+"</label>\n<ul id=\"mnu_"+(i+1)+"\"></ul></li>";
+    }
+
+    var m=1,skip=false;
+    for(i=0;i<links.length;i++) { // Menu links
+        if(links[i][0]=="" && links[i][1]=="") skip=true;
+
+        if(!skip) {
+            var prev="",printimg="";
+
+            if(showFavicon) {
+                var favicon;
+                if(links[i][2]!="") favicon=links[i][2];
+                else                favicon=getFavicon(links[i][1]);
+
+                printimg="<img id=\"img_"+i+"\" src=\""+favicon+"\""+" onload=\"javascript:this.style.visibility='inherit';\" /> ";
+            }
+            if(showPreview) {
+                prev=" onmouseover=\"javascript:preview(1,this.href);\" onmouseout=\"javascript:preview(0,0);\"";
+            }
+
+            $('mnu_'+m).innerHTML+="<li><a href=\""+links[i][1]+"\" target=\"_self\""+prev+">"+printimg+links[i][0]+"</a></li>";
+        } else {
+            skip=false; m++;
+        }
+    }
+}
+
+/*
+    Optional patch for using "!i" before the search query: http://pastebin.com/Lw24tQ81
+*/
+function handleQuery(e,q) { // Handle search query
+    var key=e.keyCode || e.which;
+
+    if(key==13) { // Enter
+        var x=q.lastIndexOf("!");
+
+        if(x!=-1 && x>=q.length-2) {
+            for(i=0;i<search.length;i++) {
+                if(search[i][0]==q.substr(x)) { // Find "*!i"
+                    window.location=search[i][1]+q.substr(0,x).replace(/&/g,"%26");
+                    return true;
+                }
+            }
+            // Invalid "!i", use default
+            window.location=ss+q.substr(0,x).replace(/&/g,"%26");
+        } else {
+            // "!i" where not specified, use default
+            window.location=ss+q.replace(/&/g,"%26");
+        }
+    }
+}
+
+function getFavicon(url) {
+    var l=document.createElement("a");
+    l.href=url;
+
+    return l.protocol+"//"+l.hostname+"/favicon.ico";
+}
+
+function toggleNote() {
+    if($('note')==null) {
+        $('help').innerHTML="<textarea id='note' spellcheck='false' placeholder='Store temporary note...'></textarea>";
+        if(localStorage.getItem('note')!=null) $('note').value=localStorage.getItem('note');
+        $('note').addEventListener('change',function() { localStorage.setItem('note',$('note').value); });
+        $('plus').value="-";
+        $('note').focus();
+    } else {
+        $('help').innerHTML=help;
+        $('plus').value="+";
+        $('q').focus();
+    }
+}
+
+var pT;
+function preview(c,x) {
+    clearTimeout(pT);
+    switch(c) {
+        case 0: // mouseout
+            $('overlay').style.opacity=1;
+            pT=setTimeout(function() { $('preview').src="about:blank"; },500);
+            break;
+        case 1: // mouseover
+            pT=setTimeout(function() { $('preview').src=x; },100);
+            break;
+        default: // load
+            if($('preview').src!="about:blank") $('overlay').style.opacity=.75;
+    }
+}
+</script>
+</head>
+<body onload="javascript:init();">
+
+<iframe id="preview" src="about:blank" onload="javascript:preview(2,0)" frameborder="0"></iframe>
+<div id="overlay"></div>
+
+<div id="center">
+    <div id="content">
+        <div id="menu">
+            <ul id="mnu"></ul>
+        </div>
+        <br />
+        <input type="text" id="q" value="" placeholder="Search..." onkeypress="javascript:handleQuery(event,this.value);" onfocus="this.value=this.value" />
+        <br /><br />
+        <div id="more">
+            <input type="button" id="plus" value="+" onclick="javascript:toggleNote();" />
+            <br />
+            <div id="help"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+

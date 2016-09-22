@@ -1,0 +1,9 @@
+.electrum
+.ssh
+.mozilla
+.weechat
+.ssh
+*.swp
+.bin
+scripts
+

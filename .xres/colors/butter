@@ -1,0 +1,42 @@
+#define fg #eddcd3
+#define bg #000000
+#define lbg #030507
+
+!030507
+!333333
+
+*foreground:                          fg
+*background:                          bg
+*cursorColor:                         #d3d3d3
+
+! Black                               Black !
+*color0:                              #353535
+*color8:                              #c3c2c5
+! Red                                 Red   !
+! #cd546c #ef545f
+*color1:                              #485373
+*color9:                              #EF545F
+! Green                               Green !
+*color2:                              #A5AF86
+*color10:                             #BDC79E
+! Yellow                              Yellow!
+*color3:                              #CD7860
+*color11:                             #E88773
+! Blue                                Blue  !
+*color4:                              #7A9388
+*color12:                             #94B1A3
+! Magenta                             Magenta
+*color5:                              #917154
+*color13:                             #989584
+! Cyan                                Cyan  !
+*color6:                              #767D75
+*color14:                             #9DA69E
+! White                               White !
+*color7:                              #C2C2A8
+*color15:                             #DBDAC1
+
+! tmux
+*color233: bg
+*color232: lbg
+*color17: #14161b
+

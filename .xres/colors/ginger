@@ -1,0 +1,24 @@
+#define fg #d0d0d0
+#define bg #000000
+#define lbg #020202
+*foreground: fg
+*background: bg
+*cursorColor: #d3d3d3
+*color233: bg
+*color17: #14161b
+*color0:   #271111
+*color1:   #461813
+*color2:   #0b2736
+*color3:   #155578
+*color4:   #702a1c
+*color5:   #081017
+*color6:   #313032
+*color7:   #29272c
+*color8:   #7d5045
+*color9:   #312c2f
+*color10:  #3c4926
+*color11:  #272329
+*color12:  #b07762
+*color13:  #a5482b
+*color14:  #f1c7ae
+*color15:  #d29d86

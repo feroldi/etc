@@ -1,0 +1,7 @@
+[user]
+	name = Mário Feroldi
+	email = thlst1101@gmail.com
+[credential]
+	helper = cache --timeout=28800
+[url "https://thelostt@github.com"]
+	insteadOf = https://github.com

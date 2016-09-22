@@ -1,0 +1,35 @@
+# Move a window
+super + {h, j, k, l}
+    umv {-x -50, -y 50, -y -50, -x 50} -w $(ufw)
+
+# Resize a window
+super + shift + {h, j, k, l}
+    urs {-x -50, -y 50, -y -50, -x 50} -w $(ufw)
+
+# Move a window a bit
+super + control + {h, j, k, l}
+    umv {-x -25, -y 25, -y -25, -x 25} -w $(ufw)
+
+# Resize a window a bit
+super + shift + control + {h, j, k, l}
+    urs {-x -25, -y 25, -y -25, -x 25} -w $(ufw)
+
+# Kill focused window
+super + q
+    ukll -w $(ufw)
+
+super + {0-9}
+    for W in $(ugrp list -g {0-9}); do umap -tw $W; done; utf -w $(ulw | tail -n1)
+
+super + shift + {0-9}
+    ugrp set --group {0-9} --wid $(ufw)
+
+super + space
+    for W in `ulw`; do umap -tw $W; done
+
+alt + {h, j, k, l}
+    utf -w $(unxt -d {h, j, k, l} -w $(ufw))
+
+super + Tab
+    utf -w $(ulw | head -n1)
+

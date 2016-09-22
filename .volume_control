@@ -1,0 +1,4 @@
+#!/bin/sh
+
+amixer set Master,0 $1 > /dev/null
+
