@@ -1,7 +1,7 @@
 # Dots
 
-These are my configuration files (oh my dotfiles). I need them to live.
-I've put it here so that I won't lost it.
+These are my configuration files (oh my dotfiles). I need
+them in order to live.
 
 Feel free to ask, contact me, fork, anything.
 
@@ -9,18 +9,15 @@ Feel free to ask, contact me, fork, anything.
 
 I might be forgetting a few ones.
 
-    rxvt-unicode, xsel, siji fonts, bitmap fonts, xdotool, sxhkd, jshon
-
-* TODO: Tree of all scripts and their respective dependencies.
+    rxvt-unicode, xclip, sxhkd, jshon, muxx
 
 # Install
 
-I keep a script to link all my dotfiles to `$HOME`, in `scripts/dotlink.sh`.
-Just run it and you are good.
+See thelostt/bin/scripts/dotlink.sh
 
-Note that there is my .gitconfig, so I highly recommend you to not run my `dotlink.sh` (unless you edit it).
+Note that there is my .gitconfig, so I highly recommend you to not run my `dotlink.sh` blindly.
 
 # License
 
-Why would I need a license for this?
+This project is licensed under MIT License. See LICENSE.
 
