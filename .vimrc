@@ -6,6 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 filetype plugin indent on
 
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
+set lazyredraw
 
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -37,6 +38,7 @@ map <F12> :r !xclip -o -sel c<CR>
 
 noremap H ^
 noremap L $
+noremap ,<space> :nohlsearch<CR>
 
 " Disable arrows
 noremap <Up> <nop>

@@ -1,9 +1,9 @@
 XDG_DESKTOP_DIR="/home/thlst/"
-XDG_DOWNLOAD_DIR="/home/thlst/downloads"
+XDG_DOWNLOAD_DIR="/home/thlst/tmp"
 XDG_TEMPLATES_DIR="/home/thlst/"
 XDG_PUBLICSHARE_DIR="/home/thlst/"
-XDG_DOCUMENTS_DIR="/home/thlst/documents/"
-XDG_MUSIC_DIR="/home/thlst/music/"
-XDG_PICTURES_DIR="/home/thlst/images/"
+XDG_DOCUMENTS_DIR="/home/thlst/doc/"
+XDG_MUSIC_DIR="/home/thlst/msc/"
+XDG_PICTURES_DIR="/home/thlst/img/"
 XDG_VIDEOS_DIR="/home/thlst/media/videos/"
 

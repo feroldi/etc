@@ -13,10 +13,7 @@ URxvt.keysym.M-s: perl:keyboard-select:search
 URxvt.keysym.M-u: perl:url-select:select_next
 
 URxvt.iso14755: false
-URxvt.keysym.Shift-Control-C: perl:clipboard:copy
-URxvt.keysym.Control-Insert: perl:clipboard:copy
 
-URxvt*urlLauncher: /usr/bin/surf
 URxvt*matcher.Button: 1
 
 URxvt.url-select.button: 1
@@ -27,7 +24,7 @@ URxvt.keysym.M-c: perl:clipboard:copy
 URxvt.keysym.M-v: perl:clipboard:paste
 URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
 
-URxvt.clipboard.copycmd: xsel -ib
-URxvt.clipboard.pastecmd: xsel -ob
+URxvt.clipboard.copycmd: xclip -sel c
+URxvt.clipboard.pastecmd: xclip -o -sel c
 
 
