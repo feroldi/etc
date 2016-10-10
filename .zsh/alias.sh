@@ -17,13 +17,12 @@ alias e='nvim'
 
 # git alias
 
-alias s='git status'
-alias co='git checkout'
-alias b='git branch'
-alias cm='git commit -m'
-alias c='git commit'
-alias ph='git push origin'
-alias pull='git pull origin'
+alias gs='git status'
+alias gco='git checkout'
+alias gb='git branch'
+alias gcm='git commit -m'
+alias gps='git push origin'
+alias gpu='git pull origin'
 
 # $1: basename
 # $2: error messagr

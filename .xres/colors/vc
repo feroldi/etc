@@ -3,7 +3,7 @@
 #define lbg #020202
 *foreground: fg
 *background: bg
-*cursorColor: #d3d3d3
+*cursorColor: fg
 *color233: bg
 *color0:   #25272b
 ! keywords
