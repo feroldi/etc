@@ -12,7 +12,7 @@ super + Print
     scrotup
 
 Print
-    scrot -e 'mv $f ~/images/screenshots/'
+    scrot -e 'mv $f ~/img/screenshots/'
 
 super + d
     dmenu_run

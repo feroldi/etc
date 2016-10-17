@@ -12,13 +12,13 @@ super + Print
     scrotup
 
 Print
-    scrot -e 'mv $f ~/images/screenshots/'
+    scrot -e 'mv $f ~/img/screenshots/'
 
 super + d
     dmenu_run
 
 super + Return
-    urxvt
+    st
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -47,8 +47,14 @@ super + q
 super + {0-9}
     for W in $(ugrp list -g {0-9}); do umap -tw $W; done; utf -w $(ulw | tail -n1)
 
+super + {z,x,c,v,b,n,m}
+    for W in $(ugrp list -g {a-z}); do umap -tw $W; done; utf -w $(ulw | tail -n1)
+
 super + shift + {0-9}
     ugrp set --group {0-9} --wid $(ufw)
+
+super + shift + {z,x,c,v,b,n,m}
+    ugrp set --group {a-z} --wid $(ufw)
 
 super + space
     for W in `ulw`; do umap -tw $W; done

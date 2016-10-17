@@ -22,10 +22,6 @@ xrdb -merge $HOME/.xres/xres
 
 . $HOME/.env/rootimg
 
-cat $HOME/.config/sxhkd/base \
-    $HOME/.config/sxhkd/uwm \
-    > $HOME/.config/sxhkd/sxhkdrc
-
 . ~/scripts/muxx/focus.sh &
 disown
 . ~/scripts/bar.sh &

@@ -37,7 +37,9 @@ merge()
     usage()
     {
         cat <<EOF >&2
-usage: $1 branch
+usage: $1 <branch>
+
+ merge current branch into <branch>
 EOF
     }
 
