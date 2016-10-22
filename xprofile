@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:$HOME/.bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:$HOME/bin"
 export TERM=screen-256color
 
 # folders

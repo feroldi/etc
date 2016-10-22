@@ -388,7 +388,7 @@ settings = {
   "fe-common/core" = {
     theme = "allego";
     hide_colors = "no";
-    autolog_path = "~/media/irclogs/%Y/$tag/$0.%m-%d.log";
+    autolog_path = "~/usr/irclogs/%Y/$tag/$0.%m-%d.log";
     autolog = "yes";
   };
 };

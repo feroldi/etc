@@ -12,13 +12,16 @@ super + Print
     scrotup
 
 Print
-    scrot -e 'mv $f ~/img/screenshots/'
+    scrot -e 'mv $f ~/usr/media/img/screenshots/'
+
+super + p
+    menu_run_dir.sh
 
 super + d
     dmenu_run
 
 super + Return
-    st
+    st -e mksh
 
 # make sxhkd reload its configuration files:
 super + Escape

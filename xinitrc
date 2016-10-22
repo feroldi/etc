@@ -22,10 +22,10 @@ xrdb -merge $HOME/.xres/xres
 
 . $HOME/.env/rootimg
 
-. ~/scripts/muxx/focus.sh &
+. ~/bin/scripts/muxx/focus.sh &
 disown
-. ~/scripts/bar.sh &
+. ~/bin/scripts/bar.sh &
 disown
 
-exec $HOME/scripts/halt.sh
+exec $HOME/bin/scripts/halt.sh
 
