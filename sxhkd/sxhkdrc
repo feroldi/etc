@@ -9,7 +9,7 @@ XF86AudioPlay
     mpc status | grep -q playing && mpc pause || mpc play
 
 super + Print
-    scrotup
+    scrotup.sh imgur.sh
 
 Print
     scrot -e 'mv $f ~/usr/media/img/screenshots/'
@@ -21,7 +21,7 @@ super + d
     dmenu_run
 
 super + Return
-    st -e mksh
+    st
 
 # make sxhkd reload its configuration files:
 super + Escape

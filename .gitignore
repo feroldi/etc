@@ -1,9 +1,5 @@
-.electrum
-.ssh
-.mozilla
-.weechat
-.ssh
+electrum
+ssh
+mozilla
 *.swp
-.bin
-scripts
 vim/.netrwhist
