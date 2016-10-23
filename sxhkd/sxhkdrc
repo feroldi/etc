@@ -3,10 +3,10 @@ XF86Audio{Prev,Next}
     mpc -q {prev,next}
 
 XF86Audio{Raise,Lower}Volume
-    sh ~/.volume_control {5%+,5%-}
+    amixer set Master,0 {5%+,5%-} >/dev/null
 
 XF86AudioPlay
-    sh ~/.mpc-play-pause
+    mpc status | grep -q playing && mpc pause || mpc play
 
 super + Print
     scrotup

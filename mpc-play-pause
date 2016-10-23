@@ -1,8 +1,0 @@
-#!/bin/zsh
-
-if [ -z $(mpc status | grep -i playing) ]; then
-    mpc play
-else
-    mpc pause
-fi
-
