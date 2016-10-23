@@ -6,5 +6,4 @@
 *.swp
 .bin
 scripts
-.vim/.netrwhist
-
+vim/.netrwhist
