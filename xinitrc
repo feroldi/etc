@@ -27,5 +27,5 @@ disown
 bar.sh &
 disown
 
-exec $HOME/bin/scripts/halt.sh
+exec halt.sh
 
