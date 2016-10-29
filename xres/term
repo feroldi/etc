@@ -1,8 +1,6 @@
 *.geometry: 80x18
-!*.font: xft:terminus:size=9:antialias=false
-!*.letterSpace: -1
 *.allow_bold: false
-*.internalBorder: 10
+*.internalBorder: 0
 
 *.font: -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
 *.boldFont: -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
@@ -14,14 +12,6 @@
 *.saveLines: 2048
 *.scrollBar: false
 *.cursorBlink: false
-
-*.tabbedex.autohide: no
-*.tabbedex.tabbar-fg: 2
-*.tabbedex.tabbar-bg: 0
-*.tabbedex.tab-fg: 10
-*.tabbedex.tab-bg: 0
-*.tabbedex.title: no
-*.tabbedex.new-button: no
 
 *.highlightColor: bg
 *.highlightTextColor: #d7d7d7

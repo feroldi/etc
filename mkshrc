@@ -2,5 +2,5 @@ export EDITOR=nvim
 
 . ~/.xprofile
 
-source $HOME/.shell/alias.sh
+. $HOME/.shell/alias.sh
 

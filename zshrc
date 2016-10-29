@@ -28,7 +28,7 @@ export SAVEHIST=256
 setopt inc_append_history
 setopt extended_history
 
-source $HOME/.shell/alias.sh
+. $HOME/.shell/alias.sh
 
 autoload -U promptinit && promptinit
 autoload -U colors && colors

@@ -6,5 +6,5 @@ export TERM=screen-256color
 # folders
 export XRES=$HOME/.xres
 
-#. $HOME/scripts/extractcol.sh
+xset m 3/2 6
 
