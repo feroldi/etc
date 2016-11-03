@@ -33,6 +33,6 @@ setopt extended_history
 autoload -U promptinit && promptinit
 autoload -U colors && colors
 
-PROMPT=" %{$fg[white]%}───%{$reset_color%}  "
+PROMPT="$ "
 RPROMPT="$VI_MODE"
 

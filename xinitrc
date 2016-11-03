@@ -14,6 +14,9 @@ export TZ="America/Sao_Paulo"
 xset +fp /home/thlst/.fonts
 xset fp rehash
 
+# set mouse stuff
+xset m 3/2 6
+
 setxkbmap br
 xmodmap .xmodmap
 
