@@ -29,15 +29,15 @@ super + Escape
 
 # Move a window
 super + {h, j, k, l}
-    umv {-x -50, -y 50, -y -50, -x 50} -w $(ufw)
-
-# Resize a window
-super + shift + {h, j, k, l}
-    urs {-x -50, -y 50, -y -50, -x 50} -w $(ufw)
+    umv {-x -100, -y 100, -y -100, -x 100} -w $(ufw)
 
 # Move a window a bit
 super + control + {h, j, k, l}
     umv {-x -25, -y 25, -y -25, -x 25} -w $(ufw)
+
+# Resize a window
+super + shift + {h, j, k, l}
+    urs {-x -100, -y 100, -y -100, -x 100} -w $(ufw)
 
 # Resize a window a bit
 super + shift + control + {h, j, k, l}

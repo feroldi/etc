@@ -5,7 +5,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 filetype plugin indent on
 
-set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
+set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 set lazyredraw
 
 " To ignore plugin indent changes, instead use:

@@ -1,6 +1,6 @@
-*.geometry: 80x18
+st.borderpx: 5
+
 *.allow_bold: false
-*.internalBorder: 0
 
 *.font: -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
 *.boldFont: -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
@@ -8,9 +8,4 @@
 
 *.scrollBar: false
 *.cursorBlink: false
-
-*.highlightColor: bg
-*.highlightTextColor: #d7d7d7
-
-st.borderpx: 5
 

@@ -14,6 +14,7 @@ alias mpvcpnv='mpv --no-video $(xclip -o -sel c)'
 alias x='startx'
 alias vim='nvim'
 alias e='nvim'
+alias s='sensors'
 
 # git alias
 

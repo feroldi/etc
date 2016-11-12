@@ -79,10 +79,10 @@ hi xmlEndTag               ctermfg=11
 hi xmlTagName              ctermfg=9
 
 " statusline
-hi StatusLine              ctermfg=0        ctermbg=13    cterm=bold
-hi StatusLineNC            ctermfg=1        ctermbg=13    cterm=bold
-hi StatusModFlag           ctermfg=1        ctermbg=13       cterm=bold
-hi StatusRO                ctermfg=9        ctermbg=13       cterm=bold
-hi StatusHLP               ctermfg=2        ctermbg=13       cterm=bold
-hi StatusPRV               ctermfg=6        ctermbg=13       cterm=bold
-hi StatusFTP               ctermfg=4        ctermbg=13       cterm=bold
+hi StatusLine              ctermfg=0        ctermbg=16    cterm=bold
+hi StatusLineNC            ctermfg=1        ctermbg=16    cterm=bold
+hi StatusModFlag           ctermfg=1        ctermbg=16       cterm=bold
+hi StatusRO                ctermfg=9        ctermbg=16       cterm=bold
+hi StatusHLP               ctermfg=2        ctermbg=16       cterm=bold
+hi StatusPRV               ctermfg=6        ctermbg=16       cterm=bold
+hi StatusFTP               ctermfg=4        ctermbg=16       cterm=bold
