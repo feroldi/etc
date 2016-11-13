@@ -5,6 +5,9 @@ XF86Audio{Prev,Next}
 XF86Audio{Raise,Lower}Volume
     amixer set Master,0 {5%+,5%-} >/dev/null
 
+XF86AudioMute
+  amixer set Master,0 toggle
+
 XF86AudioPlay
     mpc status | grep -q playing && mpc pause || mpc play
 
