@@ -25,6 +25,11 @@ alias gcm='git commit -m'
 alias gps='git push origin'
 alias gpu='git pull origin'
 
+# xclip
+
+alias xpaste='xclip -o -sel c'
+alias xcopy='xclip -sel c'
+
 # $1: basename
 # $2: error messagr
 __report()
