@@ -51,16 +51,27 @@ super + q
     ukll -w $(ufw)
 
 super + {0-9}
-    for W in $(ugrp list -g {0-9}); do umap -tw $W; done; utf -w $(ulw | tail -n1)
+    for W in $(ugrp list -g {0-9}); do \
+      umap -tw $W; \
+      done; \
+      utf -w $(ulw | tail -n1);
 
 super + {z,x,c,v,b,n,m}
-    for W in $(ugrp list -g {a-z}); do umap -tw $W; done; utf -w $(ulw | tail -n1)
+    GROUP={z,x,c,v,b,n,m}; \
+    for W in $(ugrp list -g $GROUP); do \
+      umap -tw $W; \
+    done; \
+    utf -w $(ulw | tail -n1);
 
 super + shift + {0-9}
-    ugrp set --group {0-9} --wid $(ufw)
+    GROUP={0-9}; \
+    ugrp set --group $GROUP --wid $(ufw); \
+    note.sh "$(printf '%b' "\ue099") $(ufw) → $GROUP" 1
 
 super + shift + {z,x,c,v,b,n,m}
-    ugrp set --group {a-z} --wid $(ufw)
+    GROUP={z,x,c,v,b,n,m}; \
+    ugrp set --group $GROUP --wid $(ufw); \
+    note.sh "$(printf '%b' "\ue099") $(ufw) → $GROUP" 1
 
 super + space
     for W in `ulw`; do umap -tw $W; done
