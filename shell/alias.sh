@@ -15,6 +15,8 @@ alias x='startx'
 alias vim='nvim'
 alias e='nvim'
 alias s='sensors'
+alias f='free -h'
+alias fs='f; s'
 
 # git alias
 

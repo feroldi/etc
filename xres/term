@@ -3,9 +3,8 @@ st.borderpx: 5
 *.allow_bold: false
 
 *.font: -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
-*.boldFont: -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
+*.boldFont: -*-terminusmod-*-*-*-*-*-*-*-*-*-*-*-*
 *.italicFont: -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
 
 *.scrollBar: false
-*.cursorBlink: false
 

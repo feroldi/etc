@@ -32,7 +32,7 @@ super + Escape
 
 # Move a window
 super + {h, j, k, l}
-    umv {-x -100, -y 100, -y -100, -x 100} -w $(ufw)
+    umv {-x -150, -y 150, -y -150, -x 150} -w $(ufw)
 
 # Move a window a bit
 super + control + {h, j, k, l}
@@ -40,7 +40,7 @@ super + control + {h, j, k, l}
 
 # Resize a window
 super + shift + {h, j, k, l}
-    urs {-x -100, -y 100, -y -100, -x 100} -w $(ufw)
+    urs {-x -150, -y 150, -y -150, -x 150} -w $(ufw)
 
 # Resize a window a bit
 super + shift + control + {h, j, k, l}
