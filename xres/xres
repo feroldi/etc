@@ -1,4 +1,4 @@
-#include "colors/vc"
+#include "colors/punk"
 #include "xft"
 #include "term"
 

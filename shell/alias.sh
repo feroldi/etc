@@ -6,8 +6,8 @@ alias objdump='objdump -M intel'
 
 # general
 
-alias ls='ls --color=auto'
-alias la='ls --color=auto -a'
+alias ls='ls --color=auto -F'
+alias la='ls --color=auto -aF'
 alias mpvnv='mpv --no-video'
 alias mpvcp='mpv $(xclip -o -sel c) --ytdl-format mp4'
 alias mpvcpnv='mpv --no-video $(xclip -o -sel c)'

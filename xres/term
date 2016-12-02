@@ -1,10 +1,6 @@
 st.borderpx: 5
 
 *.allow_bold: false
-
-*.font: -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
-*.boldFont: -*-terminusmod-*-*-*-*-*-*-*-*-*-*-*-*
-*.italicFont: -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
-
+*.font: -*-lime-*-*-*-*-*-*-*-*-*-*-*-*
 *.scrollBar: false
 

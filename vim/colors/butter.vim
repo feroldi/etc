@@ -54,7 +54,7 @@ hi String                  ctermfg=13
 hi Structure               ctermfg=6
 hi Tag                     ctermfg=9
 hi Title                   ctermfg=6        ctermbg=none    cterm=underline
-hi Todo                    ctermfg=1        ctermbg=3
+hi Todo                    ctermfg=0        ctermbg=3
 hi Typedef                 ctermfg=1
 hi Type                    ctermfg=2
 hi Underlined              ctermfg=0        ctermbg=none

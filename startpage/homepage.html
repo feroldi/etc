@@ -147,10 +147,10 @@ var search=[ // Search engines
 ];
 
 var menu=[ // Menu titles
-    "News",                                                         // mnu_1
-    "Programming",                                                  // mnu_2
-    "Procrastination",                                              // mnu_3
-    "Reddit",                                                       // mnu_4
+    "news",                                                         // mnu_1
+    "programming",                                                  // mnu_2
+    "procrastination",                                              // mnu_3
+    "reddit",                                                       // mnu_4
 ];
 
 var showFavicon = false;                                             // Enable/Disable Link Favicons (img)
@@ -160,48 +160,44 @@ var showPreview = false;                                             // Enable/D
 // Format: ["Name", "URL", "Custom Favicon"],
 var links=[
     // News -           mnu_1
-    ["Arch Linux",                      "http://archlinux.org",                 ""],
+    ["void Linux",                      "http://voidlinux.eu/",                 ""],
     ["/r/all",                          "http://reddit.com/r/all",              ""],
-    ["Hacker News",                     "https://news.ycombinator.com/",        ""],
-    ["Gmail",                           "https://gmail.com",                    ""],
-    ["Bountify",                        "https://bountify.co",                  ""],
-    ["Bountyc",                         "http://bountyc.com",                   ""],
+    ["hacker News",                     "https://news.ycombinator.com/",        ""],
+    ["gmail",                           "https://gmail.com",                    ""],
+    ["bountify",                        "https://bountify.co",                  ""],
 
     ["", "", ""],
 
     // Programming -          mnu_2
-    ["Writing an Os in Rust",           "http://os.phil-opp.com/",                     ""],
-    ["Rust book",                       "http://doc.rust-lang.org/nightly/book/",      ""],
-    ["Bare Metal Rust",                 "http://www.randomhacks.net/bare-metal-rust/", ""],
-    ["Interrupts",                      "http://wiki.osdev.org/Interrupts",            ""],
-    ["Developing OS Intro",             "http://wiki.osdev.org/Introduction",          ""],
+    ["writing an os in rust",           "http://os.phil-opp.com/",                     ""],
+    ["rust book",                       "http://doc.rust-lang.org/nightly/book/",      ""],
+    ["interrupts",                      "http://wiki.osdev.org/Interrupts",            ""],
+    ["developing os intro",             "http://wiki.osdev.org/Introduction",          ""],
     ["cppreference",                    "http://en.cppreference.com/w/",               ""],
     ["rustreference",                   "http://doc.rust-lang.org/nightly/std/",       ""],
 
     ["", "", ""],
 
     // Procrastination -  mnu_3
-    ["Reddit",                          "http://reddit.com",                    ""],
-    ["YouTube",                         "http://youtube.com",                   ""],
-    ["Facebook",                        "http://facebook.com",                  ""],
-    ["Messenger",                       "http://messenger.com",                 ""],
-    ["Nixers",                          "https://nixers.net/",                  ""],
+    ["reddit",                          "http://reddit.com",                    ""],
+    ["youTube",                         "http://youtube.com",                   ""],
+    ["nixers",                          "https://nixers.net/",                  ""],
 
     ["", "", ""],
 
     // Reddit -          mnu_4
     ["/r/unixporn",                     "http://reddit.com/r/unixporn",           ""],
-    ["/r/rust",                         "http://reddit.com/r/rust",               ""],
     ["/r/unixart",                      "http://reddit.com/r/unixart",            ""],
+    ["/r/explainlikeimfive",            "http://reddit.com/r/explainlikeimfive",  ""],
+    ["/r/outrun",                       "http://reddit.com/r/outrun",          ""],
     ["/r/btc",                          "http://reddit.com/r/btc",                ""],
     ["/r/programming",                  "http://reddit.com/r/programming",        ""],
     ["/r/programmerhumor",              "http://reddit.com/r/programmerhumor",    ""],
     ["/r/linux",                        "http://reddit.com/r/linux",              ""],
-    ["/r/outrun",                       "http://reddit.com/r/outrun",          ""],
     ["/r/linuxmasterrace",              "http://reddit.com/r/linuxmasterrace",    ""],
     ["/r/osdev",                        "http://reddit.com/r/osdev",              ""],
-    ["/r/explainlikeimfive",            "http://reddit.com/r/explainlikeimfive",  ""],
     ["/r/cpp",                          "http://reddit.com/r/cpp",                ""],
+    ["/r/rust",                         "http://reddit.com/r/rust",               ""],
 ];
 
 var i,ss="";
@@ -323,12 +319,7 @@ function preview(c,x) {
         <div id="menu">
             <ul id="mnu"></ul>
         </div>
-        <br />
-        <input type="text" id="q" value="" placeholder="Search..." onkeypress="javascript:handleQuery(event,this.value);" onfocus="this.value=this.value" />
-        <br /><br />
         <div id="more">
-            <input type="button" id="plus" value="+" onclick="javascript:toggleNote();" />
-            <br />
             <div id="help"></div>
         </div>
     </div>

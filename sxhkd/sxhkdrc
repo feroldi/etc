@@ -11,13 +11,16 @@ XF86AudioMute
 XF86AudioPlay
     mpc status | grep -q playing && mpc pause || mpc play
 
+super + p
+    menu_play.sh
+
 super + Print
     scrotup.sh imgur.sh
 
 Print
     scrot -e 'mv $f ~/usr/media/img/screenshots/'
 
-super + p
+super + o
     menu_run_dir.sh
 
 super + d
