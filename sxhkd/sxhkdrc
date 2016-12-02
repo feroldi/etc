@@ -66,12 +66,12 @@ super + {z,x,c,v,b,n,m}
 super + shift + {0-9}
     GROUP={0-9}; \
     ugrp set --group $GROUP --wid $(ufw); \
-    note.sh "$(printf '%b' "\ue099") $(ufw) → $GROUP" 1
+    note.sh e1dc "$GROUP: $(ufw)" 1
 
 super + shift + {z,x,c,v,b,n,m}
     GROUP={z,x,c,v,b,n,m}; \
     ugrp set --group $GROUP --wid $(ufw); \
-    note.sh "$(printf '%b' "\ue099") $(ufw) → $GROUP" 1
+    note.sh e1dc "$GROUP: $(ufw)" 1
 
 super + space
     for W in `ulw`; do umap -tw $W; done
