@@ -17,6 +17,7 @@ alias e='nvim'
 alias s='sensors'
 alias f='free -h'
 alias fs='f; s'
+alias p='ping pong'
 
 # git alias
 
@@ -83,7 +84,7 @@ EOF
 
     case "$1" in
         -h|--help)
-            usage $0
+            usage deps
             ;;
         add)
             BASE="$(basename -s .git $2)"
@@ -98,7 +99,7 @@ EOF
                 "$BRANCH" --squash
             ;;
         *)
-            usage $0
+            usage deps
             ;;
     esac
 }

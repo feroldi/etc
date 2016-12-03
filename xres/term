@@ -1,6 +1,6 @@
 st.borderpx: 5
 
 *.allow_bold: false
-*.font: -*-lime-*-*-*-*-*-*-*-*-*-*-*-*
+*.font: -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
 *.scrollBar: false
 

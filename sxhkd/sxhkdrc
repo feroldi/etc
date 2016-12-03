@@ -26,6 +26,9 @@ super + o
 super + d
     dmenu_run
 
+super + alt + p
+    mpv --no-terminal "$(xclip -o -sel c)"
+
 super + Return
     st
 
