@@ -18,6 +18,7 @@ alias s='sensors'
 alias f='free -h'
 alias fs='f; s'
 alias p='ping pong'
+alias sxiv='sxiv -qr'
 
 # git alias
 
