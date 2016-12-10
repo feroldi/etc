@@ -4,6 +4,6 @@ export EDITOR=nvim
 
 . $HOME/.shell/alias.sh
 
-PS1='$([ -d .git ] && printf "$(basename `pwd`):%s\n*" \
-$(git rev-parse --abbrev-ref HEAD) || echo \*) '
+PS1='$([ -d .git ] && printf "$(basename `pwd`):%s\n$" \
+$(git rev-parse --abbrev-ref HEAD) || echo $) '
 
