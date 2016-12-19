@@ -79,8 +79,8 @@ hi xmlEndTag               ctermfg=11
 hi xmlTagName              ctermfg=9
 
 " statusline
-hi StatusLine              ctermfg=0        ctermbg=16    cterm=bold
-hi StatusLineNC            ctermfg=1        ctermbg=16    cterm=bold
+hi StatusLine              ctermfg=16        ctermbg=8    cterm=bold
+hi StatusLineNC            ctermfg=0        ctermbg=232    cterm=bold
 hi StatusModFlag           ctermfg=1        ctermbg=16       cterm=bold
 hi StatusRO                ctermfg=9        ctermbg=16       cterm=bold
 hi StatusHLP               ctermfg=2        ctermbg=16       cterm=bold

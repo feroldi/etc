@@ -53,7 +53,7 @@ super + shift + control + {h, j, k, l}
     urs {-x -25, -y 25, -y -25, -x 25} -w $(ufw)
 
 # Kill focused window
-super + q
+super + shift + q
     ukll -w $(ufw)
 
 super + {0-9}

@@ -1,21 +1,10 @@
 set nocompatible
 filetype off
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
 filetype plugin indent on
 
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 set lazyredraw
-
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
 "set background=dark
 colorscheme butter
@@ -23,6 +12,7 @@ colorscheme butter
 syntax on
 
 set laststatus=2
+
 "set cursorline
 set number
 set relativenumber
@@ -32,9 +22,8 @@ set backspace=indent,eol,start
 
 set ruler
 
-" Maps copy-paste commands
-map <F11> :!xclip -sel c<CR>
-map <F12> :r !xclip -o -sel c<CR>
+"autocmd BufReadPost,FileReadPost,BufNewFile * 
+"     \call system("tmux rename-window `basename " . expand("%") . "`")
 
 noremap H ^
 noremap L $

@@ -88,13 +88,13 @@ EOF
             usage deps
             ;;
         add)
-            BASE="$(basename -s .git $2)"
+            BASE="$(basename -s .git "$2" | tr A-Z a-z)"
             git remote add -f "$BASE" "$2"
             git subtree add --prefix deps/"$BASE" "$BASE" \
                 "$BRANCH" --squash
             ;;
         update)
-            BASE="$2"
+            BASE="$(echo $2 | tr A-Z a-z)"
             git fetch "$BASE" master
             git subtree pull --prefix deps/"$BASE" "$BASE" \
                 "$BRANCH" --squash

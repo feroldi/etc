@@ -4,18 +4,16 @@
 
 *foreground: fg
 *background: bg
-
 *cursorColor: fg
 
 *color0:   #303c3d
-! keywords
 *color1:   #556566
 *color2:   #505c5d
 *color3:   #617c79
 *color4:   #505c5d
 *color5:   #617c79
 *color6:   #576265
-*color7:   #9aa29b
+*color7:   #6a726b
 *color8:   #303c3d
 *color9:   #556566
 *color10:  #505c5d
@@ -23,4 +21,5 @@
 *color12:  #505c5d
 *color13:  #303c3d
 *color14:  #576265
-*color15:  #9aa29b
+*color15:  #6a726b
+

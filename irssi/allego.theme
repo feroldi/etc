@@ -39,7 +39,7 @@ abstracts = {
 
   ban = "$*";
 
-  msgnick = "%c$0%w$1-%n %|";
+  msgnick = "%c<%w$1-%n%|> ";
   ownnick = "%n$*%n";
   pubnick = "%N$*%n";
 
@@ -86,10 +86,10 @@ abstracts = {
   sbstart = "";
   sbend = "";
 
-  topicsbstart = "%K <%N%b$*";
-  topicsbend = "$*%b%K>";
+  topicsbstart = "";
+  topicsbend = "";
 
-  prompt = " %K>%n ";
+  prompt = "  ";
 
   sb = "%N$1%N ";
   sbmode = "%c<%K+%N$*%c>%n";
