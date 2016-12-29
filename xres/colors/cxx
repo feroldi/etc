@@ -1,12 +1,9 @@
-#define fg #3c3c3b
-#define bg #dddddd
+#define bg #3c3c3b
+#define fg #f0f0f0
 #define lbg #d0d0d0
 *foreground: fg
 *background: bg
 *cursorColor: #3c3c3b
-*color233: bg
-*color232: lbg
-*color17: #14161b
 *color0:  #c0c0c0
 *color8:  #3c3c3b
 *color1:  #5f819d

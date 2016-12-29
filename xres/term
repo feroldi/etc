@@ -1,6 +1,6 @@
 st.borderpx: 5
+st.termname: xst
 
-*.allow_bold: false
-*.font: -*-kakwafont-*-*-*-*-*-*-*-*-*-*-*-*
-*.scrollBar: false
+*.font: -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
+*.font_bold: 0
 

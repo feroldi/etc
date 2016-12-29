@@ -43,7 +43,7 @@ hi PreCondit               ctermfg=6                        cterm=none
 hi PreProc                 ctermfg=1
 hi Question                ctermfg=1
 hi Repeat                  ctermfg=13
-hi Search                  ctermfg=207      ctermbg=235
+hi Search                  ctermfg=232      ctermbg=247
 hi SpecialChar             ctermfg=15
 hi SpecialComment          ctermfg=8
 hi Special                 ctermfg=2
@@ -54,7 +54,7 @@ hi String                  ctermfg=13
 hi Structure               ctermfg=6
 hi Tag                     ctermfg=9
 hi Title                   ctermfg=6        ctermbg=none    cterm=underline
-hi Todo                    ctermfg=0        ctermbg=3
+hi Todo                    ctermfg=0        ctermbg=178
 hi Typedef                 ctermfg=1
 hi Type                    ctermfg=2
 hi Underlined              ctermfg=0        ctermbg=none
@@ -79,7 +79,7 @@ hi xmlEndTag               ctermfg=11
 hi xmlTagName              ctermfg=9
 
 " statusline
-hi StatusLine              ctermfg=16        ctermbg=8    cterm=bold
+hi StatusLine              ctermfg=16       ctermbg=11    cterm=bold
 hi StatusLineNC            ctermfg=0        ctermbg=232    cterm=bold
 hi StatusModFlag           ctermfg=1        ctermbg=16       cterm=bold
 hi StatusRO                ctermfg=9        ctermbg=16       cterm=bold

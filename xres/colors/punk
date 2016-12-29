@@ -1,6 +1,5 @@
 #define fg #576265
 #define bg #000000
-#define lbg #303c3d
 
 *foreground: fg
 *background: bg

@@ -1,0 +1,24 @@
+#define bg    #000000
+#define fg    #c0bfbf
+
+*foreground: fg
+*background: bg
+*cursorColor: fg
+
+*color0:   #353233
+*color1:   #575556
+*color2:   #654c51
+*color3:   #7f8281
+*color4:   #8d7766
+*color5:   #5b697e
+*color6:   #7b6b75
+*color7:   #7d8592
+*color8:   #c0bfbf
+*color9:   #654c51
+*color10:  #7f8281
+*color11:  #8d7766
+*color12:  #5b697e
+*color13:  #7b6b75
+*color14:  #7d8592
+*color15: #dfdfdf
+

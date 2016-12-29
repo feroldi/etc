@@ -10,7 +10,7 @@ visualizer_output_name = "FIFO"
 visualizer_in_stereo = "yes"
 visualizer_fifo_path = "/tmp/mpd.fifo"
 visualizer_type = "spectrum" (spectrum/wave)
-visualizer_look="┃┃"
+visualizer_look="▋▋"
 visualizer_color = "green"
 visualizer_sync_interval = "10"
 
@@ -73,7 +73,7 @@ titles_visibility = "no"
 
 ## Other ##
 #now_playing_prefix = " "
-progressbar_look = "── "
+progressbar_look = "━━━"
 colors_enabled = "yes"
 autocenter_mode = "yes"
 centered_cursor = "no"
