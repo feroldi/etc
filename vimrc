@@ -17,6 +17,9 @@ set laststatus=2
 set number
 set relativenumber
 
+" aligned visual block
+set virtualedit=block
+
 " Intuitive backspacing.
 set backspace=indent,eol,start
 
