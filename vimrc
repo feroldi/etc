@@ -1,6 +1,5 @@
 set nocompatible
 filetype on
-
 filetype plugin indent on
 
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
@@ -16,6 +15,7 @@ set laststatus=2
 "set cursorline
 set number
 set relativenumber
+set ruler
 
 " aligned visual block
 set virtualedit=block
@@ -23,10 +23,8 @@ set virtualedit=block
 " Intuitive backspacing.
 set backspace=indent,eol,start
 
-set ruler
-
-"autocmd BufReadPost,FileReadPost,BufNewFile * 
-"     \call system("tmux rename-window `basename " . expand("%") . "`")
+" don't indent namespaces in C++
+"set cino=N-s
 
 noremap H ^
 noremap L $

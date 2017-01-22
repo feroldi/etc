@@ -32,27 +32,21 @@ super + alt + p
 super + Return
     st
 
-# make sxhkd reload its configuration files:
 super + Escape
     pkill -USR1 -x sxhkd
 
-# Move a window
 super + {h, j, k, l}
     umv {-x -150, -y 150, -y -150, -x 150} -w $(ufw)
 
-# Move a window a bit
 super + control + {h, j, k, l}
     umv {-x -25, -y 25, -y -25, -x 25} -w $(ufw)
 
-# Resize a window
 super + shift + {h, j, k, l}
     urs {-x -150, -y 150, -y -150, -x 150} -w $(ufw)
 
-# Resize a window a bit
 super + shift + control + {h, j, k, l}
     urs {-x -25, -y 25, -y -25, -x 25} -w $(ufw)
 
-# Kill focused window
 super + shift + q
     ukll -w $(ufw)
 

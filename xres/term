@@ -1,6 +1,7 @@
 st.borderpx: 5
 st.termname: xst
 
-*.font: -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
+!*.font: -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
+*.font: monospace:size=9
 *.font_bold: 0
 

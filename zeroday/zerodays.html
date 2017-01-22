@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Zerodays Heatmap</title>
+
+    <!-- cal-heatmap -->
+    <script type="text/javascript" src="./d3.v3.min.js"></script>
+    <script type="text/javascript" src="./cal-heatmap.min.js"></script>
+    <link rel="stylesheet" href="./cal-heatmap.css" />
+
+  </head>
+  <body>
+    <div id="cal-heatmap"></div>
+    <script type="text/javascript">
+      var reader = new XMLHttpRequest();
+      reader.open('GET', '/home/thlst/usr/zeroday/zerodays.json', false);
+      reader.send(null);
+
+      var json = JSON.parse(reader.responseText);
+      var data = {};
+
+      for(var key in json) {
+        if (json[key].points != 0) {
+          data[Date.parse(key) / 1000] = json[key].points;
+        }
+      }
+
+      var cal = new CalHeatMap();
+      cal.init({
+        data: data,
+        domain: 'month',
+        legend: [3, 5, 8, 13],
+        itemName: 'point',
+      });
+
+    </script>
+  </body>
+</html>

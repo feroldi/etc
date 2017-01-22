@@ -127,7 +127,7 @@ channels = (
   { name = "#oftc"; chatnet = "OFTC"; autojoin = "No"; },
   { name = "silc"; chatnet = "SILC"; autojoin = "No"; },
   { name = "#nixers"; chatnet = "nixers"; autojoin = "yes"; },
-  { name = "#code"; chatnet = "Rizon"; autojoin = "yes"; }
+  { name = "#rice"; chatnet = "Rizon"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -306,7 +306,7 @@ statusbar = {
     prompt_empty = "{prompt $winname}";
 
     topic = " $topic";
-    topic_empty = " Irssi v$J - http://www.irssi.org";
+    topic_empty = " Irssi v$J";
 
     lag = "{sb Lag: $0-}";
     act = "{sb Act: $0-}";
@@ -389,33 +389,13 @@ settings = {
     theme = "allego";
     hide_colors = "no";
     autolog_path = "~/usr/irclogs/%Y/$tag/$0.%m-%d.log";
-    autolog = "yes";
+    autolog = "no";
   };
 };
 windows = {
   1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
-  2 = {
-    items = (
-      {
-        type = "QUERY";
-        chat_type = "IRC";
-        name = "nickserv";
-        tag = "nixers";
-      }
-    );
-  };
-  3 = {
-    name = "nixers";
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#nixers";
-        tag = "nixers";
-      }
-    );
-  };
 };
 mainwindows = { 3 = { first_line = "1"; lines = "35"; }; };
 logs = { };
 ignores = ( { level = "JOINS PARTS QUITS MODES NICKS"; } );
+
