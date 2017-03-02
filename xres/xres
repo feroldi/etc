@@ -1,4 +1,4 @@
-#include "colors/ginger"
+#include "colors/visualstudio"
 #include "xft"
 #include "term"
 

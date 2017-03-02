@@ -6,13 +6,13 @@ set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 set lazyredraw
 
 "set background=dark
-colorscheme butter
+colorscheme vs-blue
 
 syntax on
 
 set laststatus=2
 
-"set cursorline
+set cursorline
 set number
 set relativenumber
 set ruler

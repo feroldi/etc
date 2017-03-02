@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# zeroday
+
+alias cg='zerodays.py commit general'
+alias ca='zerodays.py commit agenda'
+
 # asm
 
 alias objdump='objdump -M intel'
@@ -90,14 +95,12 @@ EOF
         add)
             BASE="$(basename -s .git "$2" | tr A-Z a-z)"
             git remote add -f "$BASE" "$2"
-            git subtree add --prefix deps/"$BASE" "$BASE" \
-                "$BRANCH" --squash
+            git subtree add --prefix "deps/$BASE" "$BASE" "$BRANCH" --squash
             ;;
         update)
             BASE="$(echo $2 | tr A-Z a-z)"
             git fetch "$BASE" master
-            git subtree pull --prefix deps/"$BASE" "$BASE" \
-                "$BRANCH" --squash
+            git subtree pull --prefix "deps/$BASE" "$BASE" "$BRANCH" --squash
             ;;
         *)
             usage deps

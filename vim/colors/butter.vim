@@ -30,32 +30,32 @@ hi Folded                  ctermfg=234        ctermbg=none
 hi Function                ctermfg=6
 hi Identifier              ctermfg=6                        cterm=none
 hi IncSearch               ctermfg=235      ctermbg=207
-hi Keyword                 ctermfg=1
+hi Keyword                 ctermfg=4
 hi Label                   ctermfg=6
-hi Macro                   ctermfg=1
+hi Macro                   ctermfg=4
 hi MatchParen              ctermfg=13       ctermbg=0    cterm=bold
 hi ModeMsg                 ctermfg=0
 hi MoreMsg                 ctermfg=2
 hi NonText                 ctermfg=0 
 hi Number                  ctermfg=9
-hi Operator                ctermfg=1                        cterm=none
+hi Operator                ctermfg=6                        cterm=none
 hi PreCondit               ctermfg=6                        cterm=none
 hi PreProc                 ctermfg=1
 hi Question                ctermfg=1
-hi Repeat                  ctermfg=13
+hi Repeat                  ctermfg=4
 hi Search                  ctermfg=232      ctermbg=247
 hi SpecialChar             ctermfg=15
 hi SpecialComment          ctermfg=8
 hi Special                 ctermfg=2
 hi SpecialKey              ctermfg=0
-hi Statement               ctermfg=9        ctermbg=none
-hi StorageClass            ctermfg=1
-hi String                  ctermfg=13
+hi Statement               ctermfg=4        ctermbg=none
+hi StorageClass            ctermfg=4
+hi String                  ctermfg=9
 hi Structure               ctermfg=6
 hi Tag                     ctermfg=9
 hi Title                   ctermfg=6        ctermbg=none    cterm=underline
 hi Todo                    ctermfg=0        ctermbg=178
-hi Typedef                 ctermfg=1
+hi Typedef                 ctermfg=4
 hi Type                    ctermfg=2
 hi Underlined              ctermfg=0        ctermbg=none
 hi VertSplit               ctermfg=15       ctermbg=0       cterm=none

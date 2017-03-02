@@ -39,7 +39,7 @@ abstracts = {
 
   ban = "$*";
 
-  msgnick = "%c<%w$1-%n%|%c> ";
+  msgnick = "%c<%w$1-%n%|%c>%n ";
   ownnick = "%n$*%n";
   pubnick = "%N$*%n";
 

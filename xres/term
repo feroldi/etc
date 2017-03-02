@@ -2,6 +2,7 @@ st.borderpx: 5
 st.termname: xst
 
 !*.font: -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
-*.font: monospace:size=9
-*.font_bold: 0
+!*.font: Fixedsys Excelsior 3.01,:size=11
+*.font: monospace:size=8
+*.bold_font: 0
 
