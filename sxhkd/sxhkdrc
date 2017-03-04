@@ -73,9 +73,6 @@ super + shift + {z,x,c,v,b,n,m}
     ugrp set --group $GROUP --wid $(ufw); \
     note.sh e1dc "$GROUP: $(ufw)" 1
 
-super + space
-    for W in `ulw`; do umap -tw $W; done
-
 alt + {h, j, k, l}
     utf -w $(unxt -d {h, j, k, l} -w $(ufw))
 

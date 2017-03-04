@@ -1,15 +1,15 @@
 let g:colors_name = "butter"
 
 
-hi Normal                  ctermfg=247 ctermbg=16
-hi Boolean                 ctermfg=31
+hi Normal                  ctermfg=246 ctermbg=16
+hi Boolean                 ctermfg=24
 hi Comment                 ctermfg=0        ctermbg=none    cterm=none
-hi Conditional             ctermfg=31
-hi Constant                ctermfg=31
+hi Conditional             ctermfg=24
+hi Constant                ctermfg=24
 hi Cursor                  ctermfg=none     ctermbg=1       cterm=none
-hi Debug                   ctermfg=31
+hi Debug                   ctermfg=24
 hi Define                  ctermfg=12
-hi Delimiter               ctermfg=31       ctermbg=none
+hi Delimiter               ctermfg=24       ctermbg=none
 hi DiffLine                ctermfg=6 
 hi DiffOldLine             ctermfg=14
 hi DiffOldFile             ctermfg=0
@@ -21,42 +21,42 @@ hi DiffRemoved             ctermfg=9
 hi DiffChange              ctermfg=6        ctermbg=none
 hi DiffChanged             ctermfg=14
 hi DiffText                ctermfg=6        ctermbg=none
-hi Directory               ctermfg=31
+hi Directory               ctermfg=24
 hi Error                   ctermfg=1        ctermbg=none
-hi Exception               ctermfg=31
+hi Exception               ctermfg=24
 hi Float                   ctermfg=none
 hi FoldColumn              ctermfg=234        ctermbg=none
 hi Folded                  ctermfg=234        ctermbg=none
 hi Function                ctermfg=none
-hi Identifier              ctermfg=31                        cterm=none
+hi Identifier              ctermfg=24                        cterm=none
 hi IncSearch               ctermfg=none      ctermbg=233
-hi Keyword                 ctermfg=31
-hi Label                   ctermfg=31
+hi Keyword                 ctermfg=24
+hi Label                   ctermfg=24
 hi Macro                   ctermfg=239
-hi MatchParen              ctermfg=31       ctermbg=0    cterm=bold
+hi MatchParen              ctermfg=24       ctermbg=0    cterm=bold
 hi ModeMsg                 ctermfg=0
 hi MoreMsg                 ctermfg=none
 hi NonText                 ctermfg=none 
 hi Number                  ctermfg=none
-hi Operator                ctermfg=31                        cterm=none
-hi PreCondit               ctermfg=31                        cterm=none
+hi Operator                ctermfg=24                        cterm=none
+hi PreCondit               ctermfg=24                        cterm=none
 hi PreProc                 ctermfg=239
-hi Question                ctermfg=31
-hi Repeat                  ctermfg=31
+hi Question                ctermfg=24
+hi Repeat                  ctermfg=24
 hi Search                  ctermfg=none      ctermbg=233
 hi SpecialChar             ctermfg=none
 hi SpecialComment          ctermfg=0
-hi Special                 ctermfg=31
-hi SpecialKey              ctermfg=31
-hi Statement               ctermfg=31        ctermbg=none
-hi StorageClass            ctermfg=31
-hi String                  ctermfg=9
-hi Structure               ctermfg=31
-hi Tag                     ctermfg=31
-hi Title                   ctermfg=31        ctermbg=none    cterm=underline
+hi Special                 ctermfg=24
+hi SpecialKey              ctermfg=24
+hi Statement               ctermfg=24        ctermbg=none
+hi StorageClass            ctermfg=24
+hi String                  ctermfg=1
+hi Structure               ctermfg=24
+hi Tag                     ctermfg=24
+hi Title                   ctermfg=24        ctermbg=none    cterm=underline
 hi Todo                    ctermfg=none        ctermbg=233
-hi Typedef                 ctermfg=31
-hi Type                    ctermfg=31
+hi Typedef                 ctermfg=24
+hi Type                    ctermfg=24
 hi Underlined              ctermfg=0        ctermbg=none
 hi VertSplit               ctermfg=15       ctermbg=0       cterm=none
 hi Visual                  ctermfg=none        ctermbg=233
@@ -65,7 +65,7 @@ hi WarningMsg              ctermfg=1
 hi WildMenu                ctermfg=104      ctermbg=1
 hi CursorLine              ctermfg=none     ctermbg=232 cterm=none
 hi LineNr                  ctermfg=0                      cterm=none
-hi CursorLineNr            ctermfg=236        ctermbg=232                       cterm=none
+hi CursorLineNr            ctermfg=242        ctermbg=232                       cterm=none
 hi ErrorMsg                ctermfg=1        ctermbg=none
 
 " html
@@ -79,10 +79,11 @@ hi xmlEndTag               ctermfg=11
 hi xmlTagName              ctermfg=9
 
 " statusline
-hi StatusLine              ctermfg=0      ctermbg=233    cterm=bold
-hi StatusLineNC            ctermfg=0        ctermbg=232    cterm=bold
+hi StatusLine              ctermfg=231      ctermbg=24    cterm=bold
+hi StatusLineNC            ctermfg=243        ctermbg=232    cterm=bold
+
 hi StatusModFlag           ctermfg=1        ctermbg=16       cterm=bold
 hi StatusRO                ctermfg=9        ctermbg=16       cterm=bold
 hi StatusHLP               ctermfg=2        ctermbg=16       cterm=bold
 hi StatusPRV               ctermfg=6        ctermbg=16       cterm=bold
-hi StatusFTP               ctermfg=31        ctermbg=16       cterm=bold
+hi StatusFTP               ctermfg=24        ctermbg=16       cterm=bold
