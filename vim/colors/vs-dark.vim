@@ -50,13 +50,13 @@ hi Special                 ctermfg=24
 hi SpecialKey              ctermfg=24
 hi Statement               ctermfg=24        ctermbg=none
 hi StorageClass            ctermfg=24
-hi String                  ctermfg=1
+hi String                  ctermfg=9
 hi Structure               ctermfg=24
 hi Tag                     ctermfg=24
 hi Title                   ctermfg=24        ctermbg=none    cterm=underline
 hi Todo                    ctermfg=none        ctermbg=233
-hi Typedef                 ctermfg=24
-hi Type                    ctermfg=24
+hi Typedef                 ctermfg=23
+hi Type                    ctermfg=23
 hi Underlined              ctermfg=0        ctermbg=none
 hi VertSplit               ctermfg=15       ctermbg=0       cterm=none
 hi Visual                  ctermfg=none        ctermbg=233

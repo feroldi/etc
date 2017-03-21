@@ -9,13 +9,13 @@ Feel free to ask, contact me, fork, anything.
 
 I might be forgetting a few ones.
 
-    rxvt-unicode, xclip, sxhkd, jshon, muxx
+    xclip, sxhkd, jshon, muxx
 
 # Install
 
 See thelostt/bin/scripts/dotlink.sh
 
-Note that there is my .gitconfig, so I highly recommend you to not run my `dotlink.sh` blindly.
+Note that there's a file `.gitconfig`, so I highly recommend you to not run my `dotlink.sh` blindly.
 
 # License
 

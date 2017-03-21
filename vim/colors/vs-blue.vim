@@ -38,7 +38,7 @@ hi IncSearch               ctermfg=235      ctermbg=207
 hi Keyword                 ctermfg=20
 hi Label                   ctermfg=24
 hi Macro                   ctermfg=240
-hi MatchParen              ctermfg=240       ctermbg=0    cterm=bold
+hi MatchParen              ctermfg=none       ctermbg=252    cterm=bold
 hi ModeMsg                 ctermfg=0
 hi MoreMsg                 ctermfg=2
 hi NonText                 ctermfg=0 
