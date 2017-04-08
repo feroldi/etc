@@ -1,28 +1,23 @@
 #define fg #6d6b6e
 #define bg #000000
-#define lbg #020202
+
 *foreground: fg
 *background: bg
-*cursorColor: fg
-*color233: bg
-*color0:   #25272b
-! keywords
-*color1:   #404c4d
-*color2:   #404c4d
-*color3:   #828285
-*color4:   #404c4d
-*color5:   #404c4d
-*color6:   #404c4d
-*color7:   #404c4d
-*color8:   #404c4d
-*color9:   #404c4d
-*color10:  #404c4d
-*color11:  #404c4d
-*color12:  #404c4d
-*color13:  #404c4d
-*color14:  #404c4d
-*color15:  #404c4d
 
-!a2a5a5
-!4a4c4b
-!6d6b6e
+*color0:   #25272b
+*color1:   #4a4b4c
+*color2:   #4a4b4c
+*color3:   #a2a2a5
+*color4:   #5d5b5e
+*color5:   #4a4b4c
+*color6:   #6d6b6f
+*color7:   #4a4b4c
+*color8:   #15171b
+*color9:   #4a4b4c
+*color10:  #3a3b3c
+*color11:  #4a4b4c
+*color12:  #4a4b4c
+*color13:  #3a3b3c
+*color14:  #4a4b4c
+*color15:  #4a4b4c
+

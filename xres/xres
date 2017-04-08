@@ -1,4 +1,4 @@
-#include "colors/visualstudio"
+#include "colors/vs-dark"
 #include "xft"
 #include "term"
 

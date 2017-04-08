@@ -13,11 +13,11 @@ hi Boolean                 ctermfg=20
 hi Comment                 ctermfg=240      ctermbg=none    cterm=none
 hi Conditional             ctermfg=20
 hi Constant                ctermfg=20
-hi Cursor                  ctermfg=none     ctermbg=1       cterm=none
+hi Cursor                  ctermfg=none     ctermbg=196       cterm=none
 hi Debug                   ctermfg=160
 hi Define                  ctermfg=24
 hi Delimiter               ctermfg=24       ctermbg=none
-hi DiffLine                ctermfg=1 
+hi DiffLine                ctermfg=196 
 hi DiffOldLine             ctermfg=124
 hi DiffOldFile             ctermfg=124
 hi DiffNewFile             ctermfg=124
@@ -55,7 +55,7 @@ hi Special                 ctermfg=20
 hi SpecialKey              ctermfg=20
 hi Statement               ctermfg=20        ctermbg=none
 hi StorageClass            ctermfg=20
-hi String                  ctermfg=1
+hi String                  ctermfg=196
 hi Structure               ctermfg=20
 hi Tag                     ctermfg=9
 hi Title                   ctermfg=25       ctermbg=none    cterm=underline
@@ -65,13 +65,13 @@ hi Type                    ctermfg=24
 hi Underlined              ctermfg=0        ctermbg=none
 hi VertSplit               ctermfg=24       ctermbg=0       cterm=none
 hi Visual                  ctermfg=none     ctermbg=250
-hi VisualNOS               ctermfg=1        ctermbg=235     cterm=bold
-hi WarningMsg              ctermfg=1   
-hi WildMenu                ctermfg=104      ctermbg=1
+hi VisualNOS               ctermfg=196        ctermbg=235     cterm=bold
+hi WarningMsg              ctermfg=196   
+hi WildMenu                ctermfg=104      ctermbg=196
 hi CursorLine              ctermfg=none     ctermbg=255 cterm=none
 hi LineNr                  ctermfg=248        cterm=none
 hi CursorLineNr            ctermfg=239      ctermbg=254    cterm=none
-hi ErrorMsg                ctermfg=1        ctermbg=none
+hi ErrorMsg                ctermfg=196        ctermbg=none
 
 " html
 hi htmlTag                 ctermfg=6
@@ -89,7 +89,7 @@ hi xmlTagName              ctermfg=9
 hi StatusLine              ctermfg=231      ctermbg=24      cterm=bold
 hi StatusLineNC            ctermfg=231        ctermbg=246      cterm=bold
 
-hi StatusModFlag           ctermfg=1        ctermbg=16       cterm=bold
+hi StatusModFlag           ctermfg=196        ctermbg=16       cterm=bold
 hi StatusRO                ctermfg=9        ctermbg=16       cterm=bold
 hi StatusHLP               ctermfg=2        ctermbg=16       cterm=bold
 hi StatusPRV               ctermfg=6        ctermbg=16       cterm=bold

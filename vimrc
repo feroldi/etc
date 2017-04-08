@@ -24,7 +24,7 @@ set virtualedit=block
 set backspace=indent,eol,start
 
 " don't indent namespaces in C++
-"set cino=N-s
+set cino=N-s
 
 noremap H ^
 noremap L $
