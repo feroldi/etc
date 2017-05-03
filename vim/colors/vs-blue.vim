@@ -12,11 +12,11 @@ hi Normal                  ctermfg=16 ctermbg=231
 hi Boolean                 ctermfg=20
 hi Comment                 ctermfg=240      ctermbg=none    cterm=none
 hi Conditional             ctermfg=20
-hi Constant                ctermfg=20
+hi Constant                ctermfg=88
 hi Cursor                  ctermfg=none     ctermbg=196       cterm=none
 hi Debug                   ctermfg=160
-hi Define                  ctermfg=24
-hi Delimiter               ctermfg=24       ctermbg=none
+hi Define                  ctermfg=20
+hi Delimiter               ctermfg=20       ctermbg=none
 hi DiffLine                ctermfg=196 
 hi DiffOldLine             ctermfg=124
 hi DiffOldFile             ctermfg=124
@@ -28,7 +28,7 @@ hi DiffDelete              ctermfg=252 ctermbg=224 guifg=#DDCCCC guibg=#FFDDDD g
 hi DiffText                ctermfg=196        ctermbg=none
 hi Directory               ctermfg=196
 hi Error                   ctermfg=160        ctermbg=none
-hi Exception               ctermfg=24
+hi Exception               ctermfg=20
 hi Float                   ctermfg=20
 hi FoldColumn              ctermfg=234        ctermbg=none
 hi Folded                  ctermfg=234        ctermbg=none
@@ -36,13 +36,13 @@ hi Function                ctermfg=16
 hi Identifier              ctermfg=none                       cterm=none
 hi IncSearch               ctermfg=235      ctermbg=207
 hi Keyword                 ctermfg=20
-hi Label                   ctermfg=24
+hi Label                   ctermfg=20
 hi Macro                   ctermfg=240
 hi MatchParen              ctermfg=none       ctermbg=252    cterm=bold
 hi ModeMsg                 ctermfg=242
 hi MoreMsg                 ctermfg=242
 hi NonText                 ctermfg=16 
-hi Number                  ctermfg=16
+hi Number                  ctermfg=24
 hi Operator                ctermfg=20                        cterm=none
 hi PreCondit               ctermfg=20                        cterm=none
 hi PreProc                 ctermfg=20
@@ -60,10 +60,10 @@ hi Structure               ctermfg=20
 hi Tag                     ctermfg=196
 hi Title                   ctermfg=25       ctermbg=none    cterm=underline
 hi Todo                    ctermfg=16        ctermbg=253
-hi Typedef                 ctermfg=24
-hi Type                    ctermfg=24
+hi Typedef                 ctermfg=20
+hi Type                    ctermfg=20
 hi Underlined              ctermfg=248        ctermbg=none
-hi VertSplit               ctermfg=24       ctermbg=232      cterm=none
+hi VertSplit               ctermfg=253       ctermbg=255      cterm=none
 hi Visual                  ctermfg=none     ctermbg=250
 hi VisualNOS               ctermfg=196        ctermbg=235     cterm=bold
 hi WarningMsg              ctermfg=196   
