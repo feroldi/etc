@@ -11,24 +11,24 @@
 *color9:  #ff0000
 
 ! DarkGreen + Green
-*color2:  #008700
-*color10: #008700
+*color2:  #6d6b6e
+*color10: #6d6b6e
 
 ! DarkYellow + Yellow
 *color3:  #005f87
 *color11: #005f87
 
 ! DarkBlue + Blue
-*color4:  #005faf
+*color4:  #2020d7
 *color12: #005f87
 
 ! DarkMagenta + Magenta
 *color5:  #005f87
-*color13: #005faf
+*color13: #2020d7
 
 ! DarkCyan + Cyan
-*color6:  #005faf
-*color14: #005faf
+*color6:  #2020d7
+*color14: #2020d7
 
 ! LightGrey + White
 *color7:  #9FaCaD

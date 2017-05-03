@@ -25,8 +25,8 @@ hi DiffAdd                 ctermfg=233 ctermbg=194 guifg=#003300 guibg=#DDFFDD g
 hi DiffChange              ctermbg=255 guibg=#ececec gui=none   cterm=none
 hi DiffText                ctermfg=233 ctermbg=189  guifg=#000033 guibg=#DDDDFF gui=none cterm=none
 hi DiffDelete              ctermfg=252 ctermbg=224 guifg=#DDCCCC guibg=#FFDDDD gui=none cterm=none
-hi DiffText                ctermfg=6        ctermbg=none
-hi Directory               ctermfg=6
+hi DiffText                ctermfg=196        ctermbg=none
+hi Directory               ctermfg=196
 hi Error                   ctermfg=160        ctermbg=none
 hi Exception               ctermfg=24
 hi Float                   ctermfg=20
@@ -39,10 +39,10 @@ hi Keyword                 ctermfg=20
 hi Label                   ctermfg=24
 hi Macro                   ctermfg=240
 hi MatchParen              ctermfg=none       ctermbg=252    cterm=bold
-hi ModeMsg                 ctermfg=0
-hi MoreMsg                 ctermfg=2
-hi NonText                 ctermfg=0 
-hi Number                  ctermfg=none
+hi ModeMsg                 ctermfg=242
+hi MoreMsg                 ctermfg=242
+hi NonText                 ctermfg=16 
+hi Number                  ctermfg=16
 hi Operator                ctermfg=20                        cterm=none
 hi PreCondit               ctermfg=20                        cterm=none
 hi PreProc                 ctermfg=20
@@ -57,13 +57,13 @@ hi Statement               ctermfg=20        ctermbg=none
 hi StorageClass            ctermfg=20
 hi String                  ctermfg=196
 hi Structure               ctermfg=20
-hi Tag                     ctermfg=9
+hi Tag                     ctermfg=196
 hi Title                   ctermfg=25       ctermbg=none    cterm=underline
 hi Todo                    ctermfg=16        ctermbg=253
 hi Typedef                 ctermfg=24
 hi Type                    ctermfg=24
-hi Underlined              ctermfg=0        ctermbg=none
-hi VertSplit               ctermfg=24       ctermbg=0       cterm=none
+hi Underlined              ctermfg=248        ctermbg=none
+hi VertSplit               ctermfg=24       ctermbg=232      cterm=none
 hi Visual                  ctermfg=none     ctermbg=250
 hi VisualNOS               ctermfg=196        ctermbg=235     cterm=bold
 hi WarningMsg              ctermfg=196   
@@ -84,14 +84,12 @@ hi xmlEndTag               ctermfg=11
 hi xmlTagName              ctermfg=9
 
 " statusline
-"hi StatusLine              ctermfg=255      ctermbg=246      cterm=bold
-"hi StatusLineNC            ctermfg=0        ctermbg=232      cterm=bold
-hi StatusLine              ctermfg=231      ctermbg=24      cterm=bold
+hi StatusLine              ctermfg=231        ctermbg=24      cterm=bold
 hi StatusLineNC            ctermfg=231        ctermbg=246      cterm=bold
 
 hi StatusModFlag           ctermfg=196        ctermbg=16       cterm=bold
-hi StatusRO                ctermfg=9        ctermbg=16       cterm=bold
-hi StatusHLP               ctermfg=2        ctermbg=16       cterm=bold
-hi StatusPRV               ctermfg=6        ctermbg=16       cterm=bold
-hi StatusFTP               ctermfg=4        ctermbg=16       cterm=bold
+hi StatusRO                ctermfg=196        ctermbg=16       cterm=bold
+hi StatusHLP               ctermfg=196        ctermbg=16       cterm=bold
+hi StatusPRV               ctermfg=196        ctermbg=16       cterm=bold
+hi StatusFTP               ctermfg=196        ctermbg=16       cterm=bold
 

@@ -4,6 +4,9 @@
 
 alias cg='zerodays.py commit general'
 alias ca='zerodays.py commit agenda'
+alias agenda='zerodays.py agenda'
+alias habit='zerodays.py todo fixed'
+alias todo='zerodays.py todo normal'
 
 # asm
 

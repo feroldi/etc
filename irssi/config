@@ -1,4 +1,13 @@
 servers = (
+  {
+    address = "unix.chat";
+    chatnet = "unixchat";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "yes";
+    ssl_capath = "/etc/ssl/certs/";
+    autoconnect = "yes";
+  },
   { address = "irc.dal.net"; chatnet = "DALnet"; port = "6667"; },
   { address = "irc.rizon.net"; chatnet = "rizon"; port = "6667"; },
   { address = "irc.nixers.net"; chatnet = "nixers"; port = "6667"; },
@@ -114,6 +123,7 @@ chatnets = {
   };
   nixers = { type = "IRC"; };
   crabsnake = { type = "IRC"; };
+  unixchat = { type = "IRC"; };
 };
 
 channels = (
@@ -392,9 +402,7 @@ settings = {
     autolog = "no";
   };
 };
-windows = {
-  1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
-};
+windows = { 1 = { immortal = "yes"; name = "(status)"; level = "ALL"; }; };
 mainwindows = { 3 = { first_line = "1"; lines = "35"; }; };
 logs = { };
 ignores = ( { level = "JOINS PARTS QUITS MODES NICKS"; } );
