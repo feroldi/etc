@@ -27,6 +27,9 @@ set backspace=indent,eol,start
 " don't indent namespaces in C++
 set cino=N-s
 
+" Enable mouse
+set mouse=a
+
 noremap H ^
 noremap L $
 noremap ,<space> :nohlsearch<CR>
@@ -47,15 +50,16 @@ inoremap <Right> <nop>
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
+" Map ESC and movement keys to terminal mode
 tnoremap <Esc> <C-\><C-n>
 tnoremap <C-h> <C-\><C-n><C-w>h
 tnoremap <C-j> <C-\><C-n><C-w>j
 tnoremap <C-k> <C-\><C-n><C-w>k
 tnoremap <C-l> <C-\><C-n><C-w>l
+
+" Map movement keys to Control-[h,j,k,l]
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-
-
 

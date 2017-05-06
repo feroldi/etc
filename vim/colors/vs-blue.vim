@@ -12,7 +12,7 @@ hi Normal                  ctermfg=16 ctermbg=231
 hi Boolean                 ctermfg=20
 hi Comment                 ctermfg=240      ctermbg=none    cterm=none
 hi Conditional             ctermfg=20
-hi Constant                ctermfg=88
+hi Constant                ctermfg=20
 hi Cursor                  ctermfg=none     ctermbg=196       cterm=none
 hi Debug                   ctermfg=160
 hi Define                  ctermfg=20
@@ -42,7 +42,7 @@ hi MatchParen              ctermfg=none       ctermbg=252    cterm=bold
 hi ModeMsg                 ctermfg=242
 hi MoreMsg                 ctermfg=242
 hi NonText                 ctermfg=16 
-hi Number                  ctermfg=24
+hi Number                  ctermfg=16
 hi Operator                ctermfg=20                        cterm=none
 hi PreCondit               ctermfg=20                        cterm=none
 hi PreProc                 ctermfg=20

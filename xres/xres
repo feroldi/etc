@@ -1,4 +1,4 @@
-#include "colors/vs-dark"
+#include "colors/vs-blue"
 #include "xft"
 #include "term"
 

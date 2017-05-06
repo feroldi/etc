@@ -24,7 +24,7 @@ super + o
     menu_run_dir.sh
 
 super + d
-    dmenu_run
+    menu_run.sh
 
 super + alt + p
     mpv --no-terminal "$(xclip -o -sel c)"
