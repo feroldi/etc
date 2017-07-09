@@ -14,17 +14,17 @@ alias objdump='objdump -M intel'
 
 # general
 
-alias ls='ls --color=auto -F'
-alias la='ls --color=auto -aF'
+alias less='less -R'
+alias ls='ls --color=always -F'
+alias la='ls --color=always -aF'
 alias mpvnv='mpv --no-video'
 alias mpvcp='mpv $(xclip -o -sel c) --ytdl-format mp4'
 alias mpvcpnv='mpv --no-video $(xclip -o -sel c)'
 alias x='startx'
 alias vim='nvim'
-alias e='nvim'
-alias s='sensors | grep Core'
-alias f='free -h | grep Mem: | awk "{print \$7}"'
-alias fs='f; s'
+alias v='nvim'
+alias temperature='sensors | grep Core'
+alias memory_usage='free -h | grep Mem: | awk "{print \$7}"'
 alias p='ping pong'
 alias sxiv='sxiv -qr'
 
@@ -48,35 +48,6 @@ __report()
 {
     printf '%s\n' "$1: $2" >&2
     return 1
-}
-
-merge()
-{
-    usage()
-    {
-        cat <<EOF >&2
-usage: $1 <branch>
-
- merge current branch into <branch>
-EOF
-    }
-
-    test $# -ne 1 && {
-        usage $0
-        return 1
-    }
-
-    CUR=$(git rev-parse --abbrev-ref HEAD)
-    BRANCH=${1:-master}
-    test "$CUR" = "$BRANCH" && {
-        return __report $0 "trying to merge $CUR to itself."
-    }
-    echo "checkout $BRANCH..."
-    git checkout "$BRANCH"
-    echo "merge $CUR..."
-    git merge "$CUR"
-    echo "going back to $CUR..."
-    git checkout "$CUR"
 }
 
 deps()

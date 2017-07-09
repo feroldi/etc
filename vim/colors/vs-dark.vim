@@ -56,7 +56,7 @@ hi Tag                     ctermfg=24
 hi Title                   ctermfg=24        ctermbg=none    cterm=underline
 hi Todo                    ctermfg=none        ctermbg=233
 hi Typedef                 ctermfg=24
-hi Type                    ctermfg=23
+hi Type                    ctermfg=24
 hi Underlined              ctermfg=238        ctermbg=none
 hi VertSplit               ctermfg=233       ctermbg=16       cterm=none
 hi Visual                  ctermfg=none        ctermbg=233

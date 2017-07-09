@@ -4,7 +4,9 @@ export EDITOR=nvim
 
 . $HOME/.shell/alias.sh
 . $HOME/.shell/less.sh
+#. $HOME/.shell/git-completion.sh
 
 PS1='$([ -d .git ] && printf "$(basename `pwd`):%s\n$" \
 $(git rev-parse --abbrev-ref HEAD) || echo $) '
 
+HISTFILE=~/.mksh_history

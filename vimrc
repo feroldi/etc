@@ -6,9 +6,6 @@ filetype plugin indent on
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 set lazyredraw
 
-"set background=dark
-colorscheme vs-blue
-
 syntax on
 
 set laststatus=2
@@ -29,6 +26,9 @@ set cino=N-s
 
 " Enable mouse
 set mouse=a
+
+"set background=dark
+colorscheme vs-blue
 
 noremap H ^
 noremap L $
@@ -63,3 +63,19 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" Removes trailing whitespaces from every line.
+function! TrimTrailingWhitespace()
+    let l:save = winsaveview()
+    %s/\s\+$//e
+    call winrestview(l:save)
+endfunction
+
+" Turns a CamelCase style into a snake_case one in current line.
+" separator is the character to be used between words (e.g. underscore, hyphen
+" etc).
+function! CamelToSnake(separator)
+  s/\<\u\|\l\u/\=len(submatch(0)) == 1 ? tolower(submatch(0)) : submatch(0)[0].a:separator.tolower(submatch(0)[1])/g
+endfunction
+
+" Removes trailing whitespaces on save.
+autocmd BufWritePre <buffer> call TrimTrailingWhitespace()
