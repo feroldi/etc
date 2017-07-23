@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# Executes system's default `xinitrc`s.
 [ -d /etc/X11/xinit/xinitrc.d ] && {
     for f in /etc/X11/xinit/xinitrc.d/?* ; do
         [ -x "$f" ] && . "$f"
@@ -7,28 +8,31 @@
     unset f
 }
 
+# Loads profile.
 [ -f ~/.xprofile ] && . ~/.xprofile
 
 export TZ="America/Sao_Paulo"
 
+# Update font cache.
 xset +fp /home/thlst/.fonts
 xset fp rehash
 
-# set mouse stuff
+# Sets mouse acceleration and threshold.
 xset m 3/2 6
 
+# Loads my custom keyboard map.
 setxkbmap br
 xmodmap .xmodmap
 
-# Loads xresources (terminal stuff)
+# Loads xresources.
 xrdb -merge $HOME/.xres/xres
 
+# Sets wallpaper.
 . $HOME/.env/rootimg
 
-focus.sh &
-disown
-bar.sh &
-disown
+# Starts a few muxx utils.
+nohup focus.sh > /dev/null 2>&1 &
+nohup bar.sh > /dev/null 2>&1 &
 
+# Halt this script (i.e. this script won't exit).
 exec halt.sh
-
