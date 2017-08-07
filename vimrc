@@ -30,6 +30,9 @@ set mouse=a
 "set background=dark
 colorscheme vs-blue
 
+" Words are kept when line-breaking
+set linebreak
+
 noremap H ^
 noremap L $
 noremap ,<space> :nohlsearch<CR>
