@@ -2,8 +2,9 @@ st.borderpx: 4
 st.termname: xst
 
 !*.font: -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
-!*.font: Fixedsys Excelsior 3.01,:size=10.7
 !*.font: Monospace:size=8.1
-*.font: Consolas:size=9
+!*.font: Source Code Pro:size=9
+*.font: Inconsolata:style=Regular:size=11.5
+!*.font: Consolas:size=9
 *.bold_font: 0
 

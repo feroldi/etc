@@ -9,4 +9,4 @@ export EDITOR=nvim
 PS1='$([ -d .git ] && printf "$(basename `pwd`):%s\n$" \
 $(git rev-parse --abbrev-ref HEAD) || echo $) '
 
-HISTFILE=~/.mksh_history
+#HISTFILE=~/.mksh_history

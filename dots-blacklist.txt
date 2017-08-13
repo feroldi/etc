@@ -1,0 +1,12 @@
+README.md
+.git
+.gitignore
+LICENSE
+ignore-list
+xmodmap
+startpage
+tmux
+tmux.conf
+zshrc
+fonts
+dots-blacklist.txt

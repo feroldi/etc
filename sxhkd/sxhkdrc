@@ -1,12 +1,17 @@
+XF86TouchpadToggle
+    synclient TouchpadOff=$(synclient -l | grep -c 'TouchpadOff.*=.*0')
 
 XF86Audio{Prev,Next}
     mpc -q {prev,next}
 
 XF86Audio{Raise,Lower}Volume
-    amixer set Master,0 {5%+,5%-} >/dev/null
+    amixer set Master,0 {10%+,10%-} 2>&1 >/dev/null
 
 XF86AudioMute
-  amixer set Master,0 toggle
+  amixer set Master,0 toggle 2>&1 >/dev/null
+
+XF86AudioMicMute
+  amixer set Capture,0 toggle 2>&1 >/dev/null
 
 XF86AudioPlay
     mpc status | grep -q playing && mpc pause || mpc play
@@ -66,12 +71,12 @@ super + {z,x,c,v,b,n,m}
 super + shift + {0-9}
     GROUP={0-9}; \
     ugrp set --group $GROUP --wid $(ufw); \
-    note.sh e1dc "$GROUP: $(ufw)" 1
+    note.sh "$GROUP: $(ufw)" 1
 
 super + shift + {z,x,c,v,b,n,m}
     GROUP={z,x,c,v,b,n,m}; \
     ugrp set --group $GROUP --wid $(ufw); \
-    note.sh e1dc "$GROUP: $(ufw)" 1
+    note.sh "$GROUP: $(ufw)" 1
 
 alt + {h, j, k, l}
     utf -w $(unxt -d {h, j, k, l} -w $(ufw))

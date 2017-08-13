@@ -21,7 +21,7 @@ xset fp rehash
 xset m 3/2 6
 
 # Loads my custom keyboard map.
-setxkbmap br
+#setxkbmap br
 xmodmap .xmodmap
 
 # Loads xresources.
@@ -33,6 +33,9 @@ xrdb -merge $HOME/.xres/xres
 # Starts a few muxx utils.
 nohup focus.sh > /dev/null 2>&1 &
 nohup bar.sh > /dev/null 2>&1 &
+
+# Sets DPI.
+#xrandr --dpi 110
 
 # Halt this script (i.e. this script won't exit).
 exec halt.sh

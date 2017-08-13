@@ -3,9 +3,6 @@
 	email = thlst1101@gmail.com
 [credential]
 	helper = cache --timeout=28800
-[url "https://thelostt@github.com"]
-	insteadOf = https://github.com
 [alias]
 	commend = commit --amend --no-edit
-	grog = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\"
 	merc = merge --no-ff
