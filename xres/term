@@ -2,9 +2,10 @@ st.borderpx: 4
 st.termname: xst
 
 !*.font: -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
-!*.font: Monospace:size=8.1
+*.font: Monospace:size=9
 !*.font: Source Code Pro:size=9
-*.font: Inconsolata:style=Regular:size=11.5
+!*.font: Inconsolata:style=Regular:size=11.5
 !*.font: Consolas:size=9
+!*.font: Noto Mono:style=Regular:size=10
 *.bold_font: 0
 

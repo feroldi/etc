@@ -5,5 +5,3 @@ export TERM=screen-256color
 
 # folders
 export XRES=$HOME/.xres
-
-

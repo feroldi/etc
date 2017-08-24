@@ -21,9 +21,6 @@ set virtualedit=block
 " Intuitive backspacing.
 set backspace=indent,eol,start
 
-" don't indent namespaces in C++
-set cino=N-s
-
 " Enable mouse
 set mouse=a
 

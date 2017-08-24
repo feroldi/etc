@@ -20,16 +20,16 @@
 *color11: #005f87
 
 ! DarkBlue + Blue
-*color4:  #0000d7
+*color4:  #3700ff
 *color12: #005f87
 
 ! DarkMagenta + Magenta
 *color5:  #005f87
-*color13: #0000d7
+*color13: #3700ff
 
 ! DarkCyan + Cyan
-*color6:  #0000d7
-*color14: #0000d7
+*color6:  #3700ff
+*color14: #3700ff
 
 ! LightGrey + White
 *color7:  #666666

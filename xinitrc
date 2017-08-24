@@ -13,6 +13,10 @@
 
 export TZ="America/Sao_Paulo"
 
+pgrep >/dev/null redshift || {
+  nohup redshift -l -21.3:-50.8 >/dev/null 2>&1 &
+}
+
 # Update font cache.
 xset +fp /home/thlst/.fonts
 xset fp rehash
@@ -21,7 +25,8 @@ xset fp rehash
 xset m 3/2 6
 
 # Loads my custom keyboard map.
-#setxkbmap br
+#setxkbmap -model pc104 -layout $1 -variant intl
+setxkbmap -model pc105 -layout us,us -variant altgr-intl,intl -option caps:swapescape,grp:shifts_toggle,grp_led:caps,compose:menu
 xmodmap .xmodmap
 
 # Loads xresources.
