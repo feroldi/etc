@@ -1,7 +1,6 @@
 #!/bin/sh
 
 # zeroday
-
 alias cg='zerodays.py commit general'
 alias ca='zerodays.py commit agenda'
 alias agenda='zerodays.py agenda'
@@ -9,11 +8,9 @@ alias habit='zerodays.py todo fixed'
 alias todo='zerodays.py todo normal'
 
 # asm
-
 alias objdump='objdump -M intel'
 
 # general
-
 alias less='less -R'
 alias ls='ls --color=always -F'
 alias la='ls --color=always -aF'
@@ -28,17 +25,7 @@ alias memory_usage='free -h | grep Mem: | awk "{print \$7}"'
 alias p='ping pong'
 alias sxiv='sxiv -qr'
 
-# git alias
-
-alias gs='git status'
-alias gco='git checkout'
-alias gb='git branch'
-alias gcm='git commit -m'
-alias gps='git push origin'
-alias gpu='git pull origin'
-
 # xclip
-
 alias xpaste='xclip -o -sel c'
 alias xcopy='xclip -sel c'
 
@@ -81,13 +68,3 @@ EOF
             ;;
     esac
 }
-
-tat()
-{
-    test -z "$1" && {
-        tmux attach
-    } || {
-        tmux attach -t "$1"
-    }
-}
-

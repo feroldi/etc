@@ -1,6 +1,4 @@
-
 *background: #ffffff
-!*foreground: #9FaCaD
 *foreground: #000000
 
 ! Black + DarkGrey
@@ -34,4 +32,3 @@
 ! LightGrey + White
 *color7:  #666666
 *color15: #777777
-

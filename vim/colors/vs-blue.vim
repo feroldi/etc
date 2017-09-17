@@ -7,7 +7,6 @@ endif
 
 let g:colors_name = "vs-blue"
 
-" 231
 hi Normal                  ctermfg=16         ctermbg=231
 hi Boolean                 ctermfg=19
 hi Comment                 ctermfg=240        ctermbg=none    cterm=none
@@ -74,13 +73,13 @@ hi CursorLineNr            ctermfg=239        ctermbg=254    cterm=none
 hi ErrorMsg                ctermfg=160        ctermbg=none
 
 " html
-hi htmlTag                 ctermfg=6
-hi htmlEndTag              ctermfg=11
+hi htmlTag                 ctermfg=21
+hi htmlEndTag              ctermfg=21
 hi htmlTagName             ctermfg=160
 
 " xml
-hi xmlTag                  ctermfg=6
-hi xmlEndTag               ctermfg=11
+hi xmlTag                  ctermfg=21
+hi xmlEndTag               ctermfg=21
 hi xmlTagName              ctermfg=160
 
 " statusline
@@ -92,4 +91,3 @@ hi StatusRO                ctermfg=160        ctermbg=16       cterm=bold
 hi StatusHLP               ctermfg=160        ctermbg=16       cterm=bold
 hi StatusPRV               ctermfg=160        ctermbg=16       cterm=bold
 hi StatusFTP               ctermfg=160        ctermbg=16       cterm=bold
-

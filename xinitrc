@@ -3,13 +3,13 @@
 # Executes system's default `xinitrc`s.
 [ -d /etc/X11/xinit/xinitrc.d ] && {
     for f in /etc/X11/xinit/xinitrc.d/?* ; do
-        [ -x "$f" ] && . "$f"
+        [ -x "$f" ] && source "$f"
     done
     unset f
 }
 
-# Loads profile.
-[ -f ~/.xprofile ] && . ~/.xprofile
+#[ -f ~/.xprofile] && source ~/.xprofile
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:$HOME/bin"
 
 export TZ="America/Sao_Paulo"
 
@@ -25,8 +25,7 @@ xset fp rehash
 xset m 3/2 6
 
 # Loads my custom keyboard map.
-#setxkbmap -model pc104 -layout $1 -variant intl
-setxkbmap -model pc105 -layout us,us -variant altgr-intl,intl -option caps:swapescape,grp:shifts_toggle,grp_led:caps,compose:menu
+setxkbmap -model pc105 -layout us,us -variant altgr-intl,intl -option grp:shifts_toggle,grp_led:caps,compose:menu
 xmodmap .xmodmap
 
 # Loads xresources.
@@ -43,4 +42,4 @@ nohup bar.sh > /dev/null 2>&1 &
 #xrandr --dpi 110
 
 # Halt this script (i.e. this script won't exit).
-exec halt.sh
+exec ~/bin/halt.sh

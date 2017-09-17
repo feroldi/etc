@@ -30,6 +30,26 @@ colorscheme vs-blue
 " Words are kept when line-breaking
 set linebreak
 
+" Maintain undo history between sessions
+set undofile
+set undodir=/tmp/vim-undo
+
+" Ignore files vim doesnt use
+set wildignore+=.git,.hg,.svn
+set wildignore+=*.aux,*.out,*.toc
+set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest,*.rbc,*.class
+set wildignore+=*.ai,*.bmp,*.gif,*.ico,*.jpg,*.jpeg,*.png,*.psd,*.webp
+set wildignore+=*.avi,*.divx,*.mp4,*.webm,*.mov,*.m2ts,*.mkv,*.vob,*.mpg,*.mpeg
+set wildignore+=*.mp3,*.oga,*.ogg,*.wav,*.flac
+set wildignore+=*.eot,*.otf,*.ttf,*.woff
+set wildignore+=*.doc,*.pdf,*.cbr,*.cbz
+set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz,*.kgb
+set wildignore+=*.swp,.lock,.DS_Store,._*
+
+" Disable startup message
+" set shortmess+=I
+
+" Map H and L to HOME and END
 noremap H ^
 noremap L $
 noremap ,<space> :nohlsearch<CR>
@@ -39,7 +59,6 @@ noremap <Up> <nop>
 noremap <Down> <nop>
 noremap <Left> <nop>
 noremap <Right> <nop>
-
 inoremap <Up> <nop>
 inoremap <Down> <nop>
 inoremap <Left> <nop>

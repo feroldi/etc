@@ -3,3 +3,7 @@ ssh
 mozilla
 *.swp
 vim/.netrwhist
+mpd/mpd.db
+mpd/mpd.log
+mpd/mpd.pid
+mpd/mpdstate
