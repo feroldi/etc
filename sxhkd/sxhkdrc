@@ -1,11 +1,15 @@
+#
+# common hotkeys
+#
+
 XF86TouchpadToggle
-    synclient TouchpadOff=$(synclient -l | grep -c 'TouchpadOff.*=.*0')
+  synclient TouchpadOff=$(synclient -l | grep -c 'TouchpadOff.*=.*0')
 
 XF86Audio{Prev,Next}
-    mpc -q {prev,next}
+  mpc -q {prev,next}
 
 XF86Audio{Raise,Lower}Volume
-    amixer set Master,0 {10%+,10%-} 2>&1 >/dev/null
+  amixer set Master,0 {10%+,10%-} 2>&1 >/dev/null
 
 XF86AudioMute
   amixer set Master,0 toggle 2>&1 >/dev/null
@@ -14,73 +18,129 @@ XF86AudioMicMute
   amixer set Capture,0 toggle 2>&1 >/dev/null
 
 XF86AudioPlay
-    mpc status | grep -q playing && mpc pause || mpc play
+  mpc status | grep -q playing && mpc pause || mpc play
 
 super + p
-    menu_play.sh
+  menu_play.sh
 
 super + Print
-    scrotup.sh imgur.sh
+  scrotup.sh imgur.sh
 
 Print
-    scrot -e 'mv $f ~/usr/media/img/screenshots/'
+  scrot -e 'mv $f ~/usr/media/img/screenshots/'
 
 super + o
-    menu_run_dir.sh
+  menu_run_dir.sh
 
 super + d
-    menu_run.sh
-
-super + alt + p
-    mpv --no-terminal "$(xclip -o -sel c)"
+  menu_run.sh
 
 super + Return
-    st
+  st
 
 super + Escape
-    pkill -USR1 -x sxhkd
+  pkill -USR1 -x sxhkd
+
+#
+# bspwm hotkeys
+#
+
+super + alt + Escape
+  bspc quit
+
+# close and kill
+super + ctrl + {_,shift + }q
+  bspc node -{c,k}
+
+# alternate between the tiled and monocle layout
+super + m
+  bspc desktop -l next
+
+# if the current node is automatic, send it to the last manual, otherwise pull the last leaf
+super + y
+  bspc query -N -n focused.automatic && bspc node -n last.!automatic || bspc node last.leaf -n focused
+
+# swap the current node and the biggest node
+super + g
+  bspc node -s biggest
+
+#
+# state/flags
+#
+
+# set the window state
+super + {t,shift + t,s,f}
+  bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+## set the node flags
+super + ctrl + {x,y,z}
+  bspc node -g {locked,sticky,private}
+
+#
+# focus/swap
+#
+
+# focus the node in the given direction
+alt + {_,shift + }{h,j,k,l}
+  bspc node -{f,s} {west,south,north,east}
+
+# focus the node for the given path jump
+alt + {p,b,comma,period}
+  bspc node -f @{parent,brother,first,second}
+
+# focus the next/previous node in the current desktop
+super + {_,shift + }Tab
+  bspc node -f {next,prev}.local
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9}
+  bspc {desktop -f,node -d} '^{1-9}'
+
+#
+# preselect
+#
+
+# preselect the direction
+super + alt + {h,j,k,l}
+  bspc node -p {west,south,north,east}
+
+# preselect the ratio
+super + ctrl + {1-9}
+  bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused node
+super + alt + space
+  bspc node -p cancel; \
+  bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+#
+# move/resize
+#
+
+## expand a window by moving one of its side outward
+#super + shift + {h,j,k,l}
+#  bspc node -z {right -150 0,bottom 0 150,bottom 0 -150,right 150 0}
+#
+## expand a window by moving one of its side outward a bit
+#super + ctrl + shift + {h,j,k,l}
+#  bspc node -z {right -25 0,bottom 0 25,bottom 0 -25,right 25 0}
+#
+## move a floating window
+#super + {h,j,k,l}
+#  bspc node -v {-150 0,0 150,0 -150,150 0}
+#
+## move a floating window a bit
+#super + ctrl + {h,j,k,l}
+#  bspc node -v {-25 0,0 25,0 -25,25 0}
 
 super + {h, j, k, l}
-    umv {-x -150, -y 150, -y -150, -x 150} -w $(ufw)
+  umv {-x -150, -y 150, -y -150, -x 150} -w $(ufw)
 
 super + control + {h, j, k, l}
-    umv {-x -25, -y 25, -y -25, -x 25} -w $(ufw)
+  umv {-x -25, -y 25, -y -25, -x 25} -w $(ufw)
 
 super + shift + {h, j, k, l}
-    urs {-x -150, -y 150, -y -150, -x 150} -w $(ufw)
+  urs {-x -150, -y 150, -y -150, -x 150} -w $(ufw)
 
 super + shift + control + {h, j, k, l}
-    urs {-x -25, -y 25, -y -25, -x 25} -w $(ufw)
-
-super + shift + q
-    ukll -w $(ufw)
-
-super + {0-9}
-    for W in $(ugrp list -g {0-9}); do \
-      umap -tw $W; \
-      done; \
-      utf -w $(ulw | tail -n1);
-
-super + {z,x,c,v,b,n,m}
-    GROUP={z,x,c,v,b,n,m}; \
-    for W in $(ugrp list -g $GROUP); do \
-      umap -tw $W; \
-    done; \
-    utf -w $(ulw | tail -n1);
-
-super + shift + {0-9}
-    GROUP={0-9}; \
-    ugrp set --group $GROUP --wid $(ufw); \
-    note.sh "$GROUP: $(ufw)" 1
-
-super + shift + {z,x,c,v,b,n,m}
-    GROUP={z,x,c,v,b,n,m}; \
-    ugrp set --group $GROUP --wid $(ufw); \
-    note.sh "$GROUP: $(ufw)" 1
-
-alt + {h, j, k, l}
-    utf -w $(unxt -d {h, j, k, l} -w $(ufw))
-
-super + Tab
-    utf -w $(ulw | head -n1)
-
+  urs {-x -25, -y 25, -y -25, -x 25} -w $(ufw)
