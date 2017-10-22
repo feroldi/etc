@@ -55,7 +55,7 @@ EOF
             ;;
         add)
             BASE="$(basename -s .git "$2" | tr A-Z a-z)"
-            git remote add -f "$BASE" "$2"
+            git remote add -f --no-tags "$BASE" "$2"
             git subtree add --prefix "deps/$BASE" "$BASE" "$BRANCH" --squash
             ;;
         update)

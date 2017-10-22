@@ -15,6 +15,9 @@ set number
 set relativenumber
 set ruler
 
+" Makes C++ interface units use C++ syntax.
+autocmd BufRead,BufNewFile *.mxx set filetype=cpp
+
 " aligned visual block
 set virtualedit=block
 

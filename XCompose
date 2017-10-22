@@ -5915,6 +5915,8 @@
 <Multi_key> <U2218> <U22a5>                     : "⍎"   U234e   # ∘ ⊥ APL FUNCTIONAL SYMBOL DOWN TACK JOT
 <Multi_key> <U22a5> <U2218>                     : "⍎"   U234e   # ⊥ ∘ APL FUNCTIONAL SYMBOL DOWN TACK JOT
 <Multi_key> <U2191> <minus>                     : "⍏"   U234f   # ↑ - APL FUNCTIONAL SYMBOL UPWARDS VANE
+<Multi_key> <bar> <k>                           : "↑"   U2191   # | ^ APL
+<Multi_key> <bar> <j>                           : "↓"   U2193   # | v APL
 <Multi_key> <minus> <U2191>                     : "⍏"   U234f   # - ↑ APL FUNCTIONAL SYMBOL UPWARDS VANE
 <Multi_key> <U2191> <U2395>                     : "⍐"   U2350   # ↑ ⎕ APL FUNCTIONAL SYMBOL QUAD UPWARDS ARROW
 <Multi_key> <U2395> <U2191>                     : "⍐"   U2350   # ⎕ ↑ APL FUNCTIONAL SYMBOL QUAD UPWARDS ARROW

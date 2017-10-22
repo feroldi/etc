@@ -8,8 +8,8 @@
     unset f
 }
 
+# Copied from ~/.xprofile.
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:$HOME/bin"
-export TZ="America/Sao_Paulo"
 
 pgrep >/dev/null redshift || {
   redshift -l -21.3:-50.8 >/dev/null 2>&1 &
@@ -17,7 +17,9 @@ pgrep >/dev/null redshift || {
 
 # Update font cache.
 xset +fp /home/thlst/.fonts
-xset fp rehash
+
+# not needed; reloads the front path on an active X session.
+#xset fp rehash
 
 # Sets mouse acceleration and threshold.
 xset m 3/2 6

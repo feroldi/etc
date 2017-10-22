@@ -18,7 +18,12 @@ bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Firefox desktop='^2'
 bspc rule -a Screenkey manage=off
 
-bspc subscribe node_manage | while read -a MSG; do
-  WID=${MSG[3]}
-  bspc node $WID -t floating
-done &
+# Make all windows floating by default, excluding
+# the first workspace.
+#TILING_DESK_ID=$(bspc query -D -d '^1')
+#
+#bspc subscribe node_manage | while read -a MSG; do
+#  DESK_ID=${MSG[2]}
+#  WID=${MSG[3]}
+#  [ "$TILING_DESK_ID" -ne "$DESK_ID" ] && bspc node "$WID" -t floating
+#done &

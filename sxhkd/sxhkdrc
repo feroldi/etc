@@ -84,17 +84,13 @@ super + ctrl + {x,y,z}
 alt + {_,shift + }{h,j,k,l}
   bspc node -{f,s} {west,south,north,east}
 
-# focus the node for the given path jump
-alt + {p,b,comma,period}
-  bspc node -f @{parent,brother,first,second}
-
 # focus the next/previous node in the current desktop
 super + {_,shift + }Tab
   bspc node -f {next,prev}.local
 
 # focus or send to the given desktop
-super + {_,shift + }{1-9}
-  bspc {desktop -f,node -d} '^{1-9}'
+super + {_,shift + }{1-9,0}
+  bspc {desktop -f,node -d} '^{1-9,0}'
 
 #
 # preselect
@@ -105,8 +101,8 @@ super + alt + {h,j,k,l}
   bspc node -p {west,south,north,east}
 
 # preselect the ratio
-super + ctrl + {1-9}
-  bspc node -o 0.{1-9}
+super + ctrl + {1-9,0}
+  bspc node -o 0.{1-9,0}
 
 # cancel the preselection for the focused node
 super + alt + space

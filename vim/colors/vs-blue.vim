@@ -7,7 +7,8 @@ endif
 
 let g:colors_name = "vs-blue"
 
-hi Normal         ctermfg=16    ctermbg=231   cterm=none
+"hi Normal         ctermfg=16    ctermbg=231   cterm=none
+hi Normal         ctermfg=16    ctermbg=none  cterm=none
 hi Boolean        ctermfg=19    ctermbg=none  cterm=none
 hi Comment        ctermfg=240   ctermbg=none  cterm=none
 hi Conditional    ctermfg=19    ctermbg=none  cterm=none
