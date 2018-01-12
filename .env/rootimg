@@ -1,0 +1,3 @@
+#!/bin/sh
+hsetroot -tile /home/thlst/usr/media/img/tile/epe.png -blur 0 -tint '#e0e0e0'
+
