@@ -1,0 +1,10 @@
+[user]
+	name = Mário Feroldi
+	email = mferoldif@gmail.com
+	signingkey = FABCE15CC919C8ED
+[credential]
+	helper = cache --timeout=28800
+[gpg]
+	program = gpg2
+[rerere]
+	enabled = true
