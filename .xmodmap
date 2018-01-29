@@ -1,2 +1,2 @@
 clear lock
-keycode 66 = Escape NoSymbol Escape Escape Escape Escape
+keycode 66 = Escape NoSymbol Escape NoSymbol NoSymbol NoSymbol

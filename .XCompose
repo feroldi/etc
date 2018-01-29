@@ -2,6 +2,8 @@
 # David.Monniaux@ens.fr
 #
 
+include '%H/.compose/operators.xcompose'
+
 # Part 0 - Customs
 
 <Multi_key> <M> <A> : "∀" U2200      # 2200 is the hexadecimal code of "∀"
