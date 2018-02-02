@@ -9,4 +9,7 @@ source $HOME/.shell/pass-completion.sh
 # commands that repeat in history.
 export HISTCONTROL=ignoreboth:erasedups
 
+# Makes autocomplete work with sudo.
+complete -cf sudo
+
 PS1='$([ -d .git ] && printf "$(basename `pwd`):%s\n$" $(git rev-parse --abbrev-ref HEAD) || echo $) '
