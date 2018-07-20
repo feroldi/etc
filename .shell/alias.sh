@@ -2,7 +2,7 @@
 
 # zeroday
 alias cg='zerodays.py commit general'
-alias ca='zerodays.py commit agenda'
+alias ca='zerodays.py agenda'
 alias agenda='zerodays.py agenda'
 alias habit='zerodays.py todo fixed'
 alias todo='zerodays.py todo normal'
@@ -28,6 +28,9 @@ alias xpaste='xclip -o -sel c'
 alias xcopy='xclip -sel c'
 
 alias vim='nvim'
+
+# Get movie subtitles.
+alias getsub='subberthehut -l pob --same-name'
 
 # $1: basename
 # $2: error messagr

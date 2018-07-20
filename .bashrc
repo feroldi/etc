@@ -1,4 +1,4 @@
-source $HOME/.xprofile
+source $HOME/.profile
 source $HOME/.shell/alias.sh
 source $HOME/.shell/less.sh
 source $HOME/.shell/git-completion.sh

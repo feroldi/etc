@@ -8,7 +8,7 @@
     unset f
 }
 
-# Copied from ~/.xprofile.
+# Copied from ~/.profile.
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:$HOME/bin"
 
 pgrep >/dev/null redshift || {
@@ -32,7 +32,7 @@ xmodmap .xmodmap
 xrdb -merge $HOME/.xres/xres
 
 # Sets wallpaper.
-. $HOME/.env/rootimg
+. $HOME/.wallpaper/setwall.sh
 
 bar.sh >/dev/null 2>&1 &
 

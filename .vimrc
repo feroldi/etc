@@ -4,8 +4,8 @@ filetype on
 filetype plugin indent on
 
 call plug#begin('~/.vim/plugged')
-Plug 'ciaranm/detectindent', {'for': 'cpp'}
-Plug 'rhysd/vim-clang-format', {'for': 'cpp'}
+Plug 'ciaranm/detectindent', {'for': ['c', 'cpp']}
+Plug 'rhysd/vim-clang-format', {'for': ['c', 'cpp']}
 call plug#end()
 
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
@@ -42,7 +42,7 @@ set linebreak
 set undofile
 set undodir=/tmp/vim-undo
 
-" Ignore files vim doesnt use
+" Ignore files vim doesn't use
 set wildignore+=.git,.hg,.svn
 set wildignore+=*.aux,*.out,*.toc
 set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest,*.rbc,*.class
@@ -54,12 +54,10 @@ set wildignore+=*.doc,*.pdf,*.cbr,*.cbz
 set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz,*.kgb
 set wildignore+=*.swp,.lock,.DS_Store,._*
 
-" Disable startup message
-" set shortmess+=I
-
 " Map H and L to HOME and END
-noremap H ^
-noremap L $
+"noremap H ^
+"noremap L $
+
 noremap ,<space> :nohlsearch<CR>
 
 " Disable arrows
@@ -109,9 +107,8 @@ autocmd BufWritePre <buffer> call TrimTrailingWhitespace()
 
 " Wraps words to 80 characters per line.
 function! SwitchToTypewriting()
-  set fo+=l
-  set wm=2
   set textwidth=80
+  set spell spelllang=en,pt
 endfunction
 
 " Make vim-clang-format use the .clang-format file for the styling.
@@ -125,3 +122,6 @@ map ,C :ClangFormat
 " :w!!
 " write the file when you accidentally opened it without the right (root) privileges
 cmap w!! w !sudo tee % > /dev/null
+
+" Disables display line numbers for terminal mode.
+au TermOpen * setlocal nonumber norelativenumber
