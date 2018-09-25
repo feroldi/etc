@@ -6,6 +6,7 @@ filetype plugin indent on
 call plug#begin('~/.vim/plugged')
 Plug 'ciaranm/detectindent', {'for': ['c', 'cpp']}
 Plug 'rhysd/vim-clang-format', {'for': ['c', 'cpp']}
+Plug 'rust-lang/rust.vim', {'for': ['rust']}
 call plug#end()
 
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
@@ -39,8 +40,8 @@ colorscheme jellybeans
 set linebreak
 
 " Maintain undo history between sessions
-set undofile
 set undodir=/tmp/vim-undo
+set undofile
 
 " Ignore files vim doesn't use
 set wildignore+=.git,.hg,.svn
@@ -118,10 +119,7 @@ let g:clang_format#detect_style_file = 1
 let g:clang_format#enable_fallback_style = 0
 
 map ,C :ClangFormat
-
-" :w!!
-" write the file when you accidentally opened it without the right (root) privileges
-cmap w!! w !sudo tee % > /dev/null
+map ,R :RustFmt
 
 " Disables display line numbers for terminal mode.
 au TermOpen * setlocal nonumber norelativenumber
