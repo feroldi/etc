@@ -20,9 +20,6 @@ XF86AudioMicMute
 XF86AudioPlay
   mpc status | grep -q playing && mpc pause || mpc play
 
-super + p
-  menu_play.sh
-
 super + Print
   scrotup.sh
 
@@ -86,8 +83,8 @@ super + {_,shift + }Tab
   bspc node -f {next,prev}.local
 
 # focus or send to the given desktop
-super + {_,shift + }{0-9}
-  bspc {desktop -f,node -d} '{0-9}'
+super + {_,shift + }{0-9,i,o,p}
+  bspc {desktop -f,node -d} '{0-9,i,o,p}'
 
 #
 # preselect

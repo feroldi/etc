@@ -9,7 +9,7 @@ Plug 'rhysd/vim-clang-format', {'for': ['c', 'cpp']}
 Plug 'rust-lang/rust.vim', {'for': ['rust']}
 call plug#end()
 
-set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 set lazyredraw
 
 syntax on

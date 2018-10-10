@@ -1,11 +1,7 @@
 #!/bin/sh
 
-# zeroday
-alias cg='zerodays.py commit general'
-alias ca='zerodays.py agenda'
-alias agenda='zerodays.py agenda'
-alias habit='zerodays.py todo fixed'
-alias todo='zerodays.py todo normal'
+# daily-thought
+alias dl='daily-thought.py --out-dir ~/usr/daily-thoughts/'
 
 # asm
 alias objdump='objdump -M intel'
