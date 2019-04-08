@@ -5,8 +5,10 @@ filetype plugin indent on
 
 call plug#begin('~/.vim/plugged')
 Plug 'ciaranm/detectindent', {'for': ['c', 'cpp']}
-Plug 'rhysd/vim-clang-format', {'for': ['c', 'cpp']}
+Plug 'rhysd/vim-clang-format', {'for': ['c', 'cpp', 'java']}
 Plug 'rust-lang/rust.vim', {'for': ['rust']}
+Plug 'dart-lang/dart-vim-plugin', {'for': ['dart']}
+Plug 'leafgarland/typescript-vim', {'for': ['typescript']}
 call plug#end()
 
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
@@ -35,6 +37,7 @@ set mouse=a
 
 "set background=dark
 colorscheme jellybeans
+
 
 " Words are kept when line-breaking
 set linebreak
@@ -117,6 +120,9 @@ let g:clang_format#detect_style_file = 1
 
 " Do nothing when .clang-format is not found.
 let g:clang_format#enable_fallback_style = 0
+
+" Enable Dart style guide syntax (like 2-space indentation).
+let dart_style_guide = 2
 
 map ,C :ClangFormat
 map ,R :RustFmt

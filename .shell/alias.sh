@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # daily-thought
-alias dl='daily-thought.py --out-dir ~/usr/daily-thoughts/'
+alias dl='daily-thought.py --work-dir ~/usr/daily-thoughts/'
 
 # asm
 alias objdump='objdump -M intel'

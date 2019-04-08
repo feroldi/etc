@@ -2,7 +2,7 @@
 # David.Monniaux@ens.fr
 #
 
-include '%H/.compose/operators.xcompose'
+include "%H/.compose/operators.xcompose"
 
 # Part 0 - Customs
 
