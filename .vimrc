@@ -23,10 +23,11 @@ set number
 set relativenumber
 set ruler
 
-" Makes C++ interface units use C++ syntax.
-autocmd BufRead,BufNewFile *.mxx set filetype=cpp
+" Required by LanguageClient-neovim for operations modifying multiple buffers
+" like rename
+set hidden
 
-" aligned visual block
+" Aligned visual block
 set virtualedit=block
 
 " Intuitive backspacing.
@@ -37,7 +38,6 @@ set mouse=a
 
 "set background=dark
 colorscheme jellybeans
-
 
 " Words are kept when line-breaking
 set linebreak
@@ -57,6 +57,9 @@ set wildignore+=*.eot,*.otf,*.ttf,*.woff
 set wildignore+=*.doc,*.pdf,*.cbr,*.cbz
 set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz,*.kgb
 set wildignore+=*.swp,.lock,.DS_Store,._*
+
+" Makes C++ module interface units use C++ syntax.
+autocmd BufRead,BufNewFile *.mxx set filetype=cpp
 
 " Map H and L to HOME and END
 "noremap H ^

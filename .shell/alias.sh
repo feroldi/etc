@@ -15,8 +15,6 @@ alias mpvnv='mpv --no-video'
 alias mpvcp='mpv $(xclip -o -sel c) --ytdl-format mp4'
 alias mpvcpnv='mpv --no-video $(xclip -o -sel c)'
 alias x='startx'
-alias temperature='acpi -t'
-alias memory_usage='free -h | grep Mem: | awk "{print \$7}"'
 alias p='ping pong'
 alias sxiv='sxiv -qr'
 
