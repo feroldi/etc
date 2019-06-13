@@ -22,8 +22,6 @@ alias sxiv='sxiv -qr'
 alias xpaste='xclip -o -sel c'
 alias xcopy='xclip -sel c'
 
-alias vim='nvim'
-
 # Get movie subtitles.
 alias getsub='subberthehut -l pob --same-name'
 

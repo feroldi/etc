@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/thlst/usr/dev/cci/lib/parser'
-let g:netrw_dirhist_2='/home/thlst/usr/dev/cci/lib/util'
-let g:netrw_dirhist_3='/home/thlst/usr/dev/cci/build/sarcasm/Testing'
-let g:netrw_dirhist_4='/home/thlst/usr/dev/cci/src/cci'
-let g:netrw_dirhist_5='/home/thlst/usr/dev/raiblocks.rs/.git'
