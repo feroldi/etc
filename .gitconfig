@@ -8,3 +8,5 @@
 	program = gpg2
 [rerere]
 	enabled = true
+[commit]
+	gpgsign = true
