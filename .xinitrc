@@ -8,9 +8,6 @@
     unset f
 }
 
-# Copied from ~/.profile.
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:$HOME/bin"
-
 pgrep >/dev/null redshift || {
   redshift -l -21.3:-50.8 >/dev/null 2>&1 &
 }

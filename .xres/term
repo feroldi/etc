@@ -1,5 +1,5 @@
 st.borderpx: 4
-st.termname: xst
+st.termname: st
 st.bold_font: 0
 
 !*.font: Source Code Pro:size=9

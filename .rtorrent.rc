@@ -23,7 +23,7 @@
 
 # Default directory to save the downloaded torrents.
 #
-#directory.default.set = ~/usr/torrent
+directory.default.set = ~/usr/torrent
 
 # Default session directory. Make sure you don't run multiple instance
 # of rtorrent using the same session directory. Perhaps using a

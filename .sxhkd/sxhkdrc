@@ -6,7 +6,7 @@ XF86TouchpadToggle
   synclient TouchpadOff=$(synclient -l | grep -c 'TouchpadOff.*=.*0')
 
 XF86Audio{Prev,Next}
-  mpc -q {prev,next}
+  media-ctrl.sh {prev,next}
 
 XF86Audio{Raise,Lower}Volume
   amixer set Master,0 {10%+,10%-} 2>&1 >/dev/null
@@ -18,7 +18,7 @@ XF86AudioMicMute
   amixer set Capture,0 toggle 2>&1 >/dev/null
 
 XF86AudioPlay
-  mpc status | grep -q playing && mpc pause || mpc play
+   media-ctrl.sh play-pause
 
 super + Print
   scrotup.sh

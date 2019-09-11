@@ -5,13 +5,18 @@ filetype plugin indent on
 
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'ciaranm/detectindent', {'for': ['c', 'cpp']}
-Plug 'rhysd/vim-clang-format', {'for': ['c', 'cpp', 'java']}
+Plug 'rhysd/vim-clang-format', {'for': ['c', 'cpp', 'java', 'typescript']}
 Plug 'rust-lang/rust.vim', {'for': ['rust']}
 Plug 'dart-lang/dart-vim-plugin', {'for': ['dart']}
 Plug 'leafgarland/typescript-vim', {'for': ['typescript']}
+Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 call plug#end()
 
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
+
+" Indent 2 spaces for typescript files.
+autocmd Filetype typescript set tabstop=2 shiftwidth=2
+
 set lazyredraw
 
 syntax on

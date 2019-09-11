@@ -1,5 +1,3 @@
-source $HOME/.profile
-
 # Don't save lines starting with a space, or
 # commands that repeat in history.
 export HISTCONTROL=ignoreboth:erasedups
@@ -50,10 +48,6 @@ alias less='less -R'
 alias ls='ls --color=auto -F'
 alias la='ls --color=auto -aF'
 alias grep='grep --color=auto'
-alias mpvnv='mpv --no-video'
-alias mpvcp='mpv $(xclip -o -sel c) --ytdl-format mp4'
-alias mpvcpnv='mpv --no-video $(xclip -o -sel c)'
-alias x='startx'
 alias p='ping pong'
 alias sxiv='sxiv -qr'
 
@@ -63,3 +57,18 @@ alias xcopy='xclip -sel c'
 
 # Get movie subtitles.
 alias getsub='subberthehut -l pob --same-name'
+
+# GPG agent support for SSH
+#
+# The test involving the gnupg_SSH_AUTH_SOCK_by variable is for the case
+# where the agent is started as gpg-agent --daemon /bin/sh, in which case
+# the shell inherits the SSH_AUTH_SOCK variable from the parent, gpg-agent
+# unset SSH_AGENT_PID
+if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+  export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
+fi
+
+export GPG_TTY=$(tty)
+
+# Refresh gpg-agent tty in case user switches into an X session.
+gpg-connect-agent updatestartuptty /bye >/dev/null
