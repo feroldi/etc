@@ -8,6 +8,9 @@ XF86TouchpadToggle
 XF86Audio{Prev,Next}
   media-ctrl.sh {prev,next}
 
+F{9,11}
+  media-ctrl.sh {prev,next}
+
 XF86Audio{Raise,Lower}Volume
   amixer set Master,0 {10%+,10%-} 2>&1 >/dev/null
 
@@ -17,7 +20,7 @@ XF86AudioMute
 XF86AudioMicMute
   amixer set Capture,0 toggle 2>&1 >/dev/null
 
-XF86AudioPlay
+{XF86AudioPlay,F10}
    media-ctrl.sh play-pause
 
 super + Print
