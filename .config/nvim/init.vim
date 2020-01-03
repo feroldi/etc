@@ -9,13 +9,15 @@ Plug 'rhysd/vim-clang-format', {'for': ['c', 'cpp', 'java', 'typescript']}
 Plug 'rust-lang/rust.vim', {'for': ['rust']}
 Plug 'dart-lang/dart-vim-plugin', {'for': ['dart']}
 Plug 'leafgarland/typescript-vim', {'for': ['typescript']}
-Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 call plug#end()
 
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " Indent 2 spaces for typescript files.
-autocmd Filetype typescript set tabstop=2 shiftwidth=2
+autocmd Filetype typescript setlocal tabstop=2 shiftwidth=2
+
+" Indent 2 spaces for yaml files.
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 set lazyredraw
 

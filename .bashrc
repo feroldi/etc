@@ -48,7 +48,7 @@ alias less='less -R'
 alias ls='ls --color=auto -F'
 alias la='ls --color=auto -aF'
 alias grep='grep --color=auto'
-alias p='ping pong'
+alias p='ping 1.1.1.1'
 alias sxiv='sxiv -qr'
 
 # xclip
@@ -72,3 +72,27 @@ export GPG_TTY=$(tty)
 
 # Refresh gpg-agent tty in case user switches into an X session.
 gpg-connect-agent updatestartuptty /bye >/dev/null
+
+# Loads nvm only when one runs `nvm` for the first time in a shell session.
+nvm() {
+    unset -f nvm
+    export NVM_DIR=~/.nvm
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+    nvm "$@"
+}
+
+# Loads node from nvm only when one runs `node` for the first time in a shell session.
+node() {
+    unset -f node
+    export NVM_DIR=~/.nvm
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+    node "$@"
+}
+
+# Loads npm from nvm only when one runs `npm` for the first time in a shell session.
+npm() {
+    unset -f npm
+    export NVM_DIR=~/.nvm
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+    npm "$@"
+}

@@ -5,15 +5,12 @@ filetype plugin indent on
 
 call plug#begin('~/.vim/plugged')
 Plug 'ciaranm/detectindent', {'for': ['c', 'cpp']}
-Plug 'rhysd/vim-clang-format', {'for': ['c', 'cpp', 'java']}
+Plug 'rhysd/vim-clang-format', {'for': ['c', 'cpp', 'java', 'typescript']}
 Plug 'rust-lang/rust.vim', {'for': ['rust']}
 Plug 'dart-lang/dart-vim-plugin', {'for': ['dart']}
 Plug 'leafgarland/typescript-vim', {'for': ['typescript']}
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --java-completer' }
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 call plug#end()
-
-let $JAVA_TOOL_OPTIONS .= expand('-javaagent:$HOME/usr/eclipse/lombok.jar')
 
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 set lazyredraw
