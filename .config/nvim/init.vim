@@ -129,7 +129,7 @@ endfunction
 let g:clang_format#detect_style_file = 1
 
 " Do nothing when .clang-format is not found.
-let g:clang_format#enable_fallback_style = 0
+let g:clang_format#enable_fallback_style = 1
 
 " Enable Dart style guide syntax (like 2-space indentation).
 let dart_style_guide = 2
