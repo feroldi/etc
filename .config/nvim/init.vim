@@ -9,6 +9,7 @@ Plug 'rhysd/vim-clang-format', {'for': ['c', 'cpp', 'java', 'typescript']}
 Plug 'rust-lang/rust.vim', {'for': ['rust']}
 Plug 'dart-lang/dart-vim-plugin', {'for': ['dart']}
 Plug 'leafgarland/typescript-vim', {'for': ['typescript']}
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['cpp']}
 call plug#end()
 
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
@@ -18,6 +19,9 @@ autocmd Filetype typescript setlocal tabstop=2 shiftwidth=2
 
 " Indent 2 spaces for yaml files.
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+" Auto-format on C and C++ source files.
+autocmd FileType c,cpp ClangFormatAutoEnable
 
 set lazyredraw
 
@@ -72,7 +76,9 @@ autocmd BufRead,BufNewFile *.mxx set filetype=cpp
 "noremap H ^
 "noremap L $
 
-noremap ,<space> :nohlsearch<CR>
+let mapleader = ","
+
+noremap <leader><space> :nohlsearch<CR>
 
 " Disable arrows
 noremap <Up> <nop>
@@ -139,3 +145,51 @@ map ,R :RustFmt
 
 " Disables display line numbers for terminal mode.
 au TermOpen * setlocal nonumber norelativenumber
+
+" CoC configuration
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+
+" Use `[g` and `]g` to navigate diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=300
+
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
+" position. Coc only does snippet and additional edit on confirm.
+if has('patch8.1.1068')
+  " Use `complete_info` if your (Neo)Vim version supports it.
+  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+  imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
+
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+
+" Remap keys for applying codeAction to the current line.
+nmap <leader>ac  <Plug>(coc-codeaction)
