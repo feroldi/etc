@@ -10,6 +10,7 @@ Plug 'rust-lang/rust.vim', {'for': ['rust']}
 Plug 'dart-lang/dart-vim-plugin', {'for': ['dart']}
 Plug 'leafgarland/typescript-vim', {'for': ['typescript']}
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['cpp']}
+Plug 'jackguo380/vim-lsp-cxx-highlight', {'for': ['cpp']}
 call plug#end()
 
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
@@ -148,6 +149,10 @@ au TermOpen * setlocal nonumber norelativenumber
 
 " CoC configuration
 
+" Some servers have issues with backup files, see #649.
+set nobackup
+set nowritebackup
+
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
 
@@ -161,8 +166,8 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+" Use <leader>K to show documentation in preview window.
+nnoremap <leader>K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)

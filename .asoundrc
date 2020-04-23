@@ -16,9 +16,9 @@
 #defaults.pcm.!card PCH
 #defaults.ctl.!card PCH
 
-pcm.default pulse
-ctl.default pulse
+pcm.!default pulse
+ctl.!default pulse
 
-pcm.pulse { type pulse }
-ctl.pulse { type pulse }
+pcm.!pulse { type pulse }
+ctl.!pulse { type pulse }
 
