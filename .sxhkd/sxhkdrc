@@ -86,11 +86,11 @@ alt + {_,shift + }{h,j,k,l}
 
 # focus the next/previous node in the current desktop
 super + {_,shift + }Tab
-  bspc node -f {next,prev}.local
+  bspc node -f {next,prev}.local.!hidden.window
 
 # focus or send to the given desktop
-super + {_,shift + }{0-9,i,o,p}
-  bspc {desktop -f,node -d} '{0-9,i,o,p}'
+super + {_,shift + }{0-9}
+  bspc {desktop -f,node -d} '{0-9}'
 
 #
 # preselect
