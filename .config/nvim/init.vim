@@ -9,8 +9,9 @@ Plug 'rhysd/vim-clang-format', {'for': ['c', 'cpp', 'java', 'typescript']}
 Plug 'rust-lang/rust.vim', {'for': ['rust']}
 Plug 'dart-lang/dart-vim-plugin', {'for': ['dart']}
 Plug 'leafgarland/typescript-vim', {'for': ['typescript']}
-Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['cpp']}
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['cpp', 'rust', 'dart']}
 Plug 'jackguo380/vim-lsp-cxx-highlight', {'for': ['cpp']}
+Plug 'bfrg/vim-cpp-modern'
 call plug#end()
 
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
@@ -144,6 +145,19 @@ let dart_style_guide = 2
 map ,C :ClangFormat
 map ,R :RustFmt
 
+" Disable function highlighting (affects both C and C++ files)
+let g:cpp_no_function_highlight = 0
+
+" Put all standard C and C++ keywords under Vim's highlight group 'Statement'
+" (affects both C and C++ files)
+let g:cpp_simple_highlight = 0
+
+" Enable highlighting of named requirements (C++20 library concepts)
+let g:cpp_named_requirements_highlight = 1
+
+" Vim tends to a have issues with flagging braces inside brackets as invalid syntax.
+let c_no_curly_error = 1
+
 " Disables display line numbers for terminal mode.
 au TermOpen * setlocal nonumber norelativenumber
 
@@ -177,6 +191,9 @@ function! s:show_documentation()
   endif
 endfunction
 
+" Trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
 set updatetime=300
@@ -198,3 +215,6 @@ nmap <leader>qf  <Plug>(coc-fix-current)
 
 " Remap keys for applying codeAction to the current line.
 nmap <leader>ac  <Plug>(coc-codeaction)
+
+" Enable Python syntax highlighting from ~/.config/nvim/after/syntax/python.vim
+let g:python_highlight_all = 1

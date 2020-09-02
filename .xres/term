@@ -1,8 +1,5 @@
 st.borderpx: 4
 st.termname: st
-st.bold_font: 0
+st.bold_font: 1
 
-!*.font: Source Code Pro:size=9
-!*.font: Inconsolata:style=Regular:size=10
-!*.font: Noto Mono:style=Regular:size=10
-*.font: Consolas:style=Regular:size=9.1
+*.font: Consolas:pixelsize=14
