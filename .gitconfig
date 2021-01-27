@@ -10,3 +10,5 @@
 	enabled = true
 [commit]
 	gpgsign = true
+[alias]
+	st = status

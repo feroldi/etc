@@ -7,11 +7,11 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'ciaranm/detectindent', {'for': ['c', 'cpp']}
 Plug 'rhysd/vim-clang-format', {'for': ['c', 'cpp', 'java', 'typescript']}
 Plug 'rust-lang/rust.vim', {'for': ['rust']}
-Plug 'dart-lang/dart-vim-plugin', {'for': ['dart']}
-Plug 'leafgarland/typescript-vim', {'for': ['typescript']}
+Plug 'dart-lang/dart-vim-plugin', {'for': 'dart'}
+Plug 'leafgarland/typescript-vim', {'for': 'typescript'}
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['cpp', 'rust', 'dart']}
-Plug 'jackguo380/vim-lsp-cxx-highlight', {'for': ['cpp']}
 Plug 'bfrg/vim-cpp-modern'
+Plug 'neovimhaskell/haskell-vim', {'for': 'haskell'}
 call plug#end()
 
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
@@ -49,7 +49,7 @@ set backspace=indent,eol,start
 " Enable mouse
 set mouse=a
 
-"set background=dark
+set background=dark
 colorscheme jellybeans
 
 " Words are kept when line-breaking
@@ -146,11 +146,11 @@ map ,C :ClangFormat
 map ,R :RustFmt
 
 " Disable function highlighting (affects both C and C++ files)
-let g:cpp_no_function_highlight = 0
+let g:cpp_no_function_highlight = 1
 
 " Put all standard C and C++ keywords under Vim's highlight group 'Statement'
 " (affects both C and C++ files)
-let g:cpp_simple_highlight = 0
+let g:cpp_simple_highlight = 1
 
 " Enable highlighting of named requirements (C++20 library concepts)
 let g:cpp_named_requirements_highlight = 1
@@ -215,6 +215,14 @@ nmap <leader>qf  <Plug>(coc-fix-current)
 
 " Remap keys for applying codeAction to the current line.
 nmap <leader>ac  <Plug>(coc-codeaction)
+
+" Use CTRL-S for selections ranges.
+" Requires 'textDocument/selectionRange' support of language server.
+nmap <silent> <C-s> <Plug>(coc-range-select)
+xmap <silent> <C-s> <Plug>(coc-range-select)
+
+" Add `:Format` command to format current buffer.
+command! -nargs=0 Format :call CocAction('format')
 
 " Enable Python syntax highlighting from ~/.config/nvim/after/syntax/python.vim
 let g:python_highlight_all = 1

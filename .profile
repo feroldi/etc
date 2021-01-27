@@ -10,6 +10,9 @@ PATH="$HOME/bin:$PATH"
 # For flutter mobile development tool
 PATH="$HOME/usr/repo/flutter/bin:$PATH"
 
+# For Dart devtools
+PATH="$HOME/.pub-cache/bin:$PATH"
+
 # For poetry python package manager
 PATH="$HOME/.poetry/bin:$PATH"
 
