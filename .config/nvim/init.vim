@@ -12,6 +12,9 @@ Plug 'leafgarland/typescript-vim', {'for': 'typescript'}
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['cpp', 'rust', 'dart']}
 Plug 'bfrg/vim-cpp-modern'
 Plug 'neovimhaskell/haskell-vim', {'for': 'haskell'}
+Plug 'machakann/vim-sandwich'
+Plug 'tpope/vim-fugitive'
+Plug 'mbbill/undotree'
 call plug#end()
 
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
