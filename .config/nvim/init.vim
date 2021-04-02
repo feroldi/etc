@@ -229,3 +229,6 @@ command! -nargs=0 Format :call CocAction('format')
 
 " Enable Python syntax highlighting from ~/.config/nvim/after/syntax/python.vim
 let g:python_highlight_all = 1
+
+" Toggle undotree split
+nnoremap <F5> :UndotreeToggle<CR>
